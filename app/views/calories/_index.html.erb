@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Calories</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Logged on</th>
+      <th>Calories Consumed</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @calories.each do |calorie| %>
+      <tr>
+        <td><%= calorie.logged_on %></td>
+        <td><%= calorie.calories_consumed %></td>
+        <td><%= link_to 'Show', calorie %></td>
+        <td><%= link_to 'Edit', edit_step_path(step) %></td>
+        <td><%= link_to 'Destroy', calorie, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Log Calories', new_calorie_path %>
