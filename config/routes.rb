@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :steps_takens
+
   get 'home/dashboard'
 
   resources :weights

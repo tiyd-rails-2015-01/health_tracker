@@ -11,7 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150129185301) do
+ActiveRecord::Schema.define(version: 20150129213138) do
+
+  create_table "steps_takens", force: :cascade do |t|
+    t.date     "date"
+    t.integer  "steps"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "weights", force: :cascade do |t|
     t.date     "date"
