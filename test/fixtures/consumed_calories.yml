@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  calorie_amount: 1
+  meal_type: MyString
+  consumed_on: 2015-01-29
+
+two:
+  calorie_amount: 1
+  meal_type: MyString
+  consumed_on: 2015-01-29

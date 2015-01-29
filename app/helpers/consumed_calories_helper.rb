@@ -1,0 +1,2 @@
+module ConsumedCaloriesHelper
+end
