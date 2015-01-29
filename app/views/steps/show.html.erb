@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Step amount:</strong>
+  <%= @step.step_amount %>
+</p>
+
+<p>
+  <strong>Step on:</strong>
+  <%= @step.step_on %>
+</p>
+
+<%= link_to 'Edit', edit_step_path(@step) %> |
+<%= link_to 'Back', steps_path %>
