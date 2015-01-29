@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  daily_weight: 9.99
+  recorded_on: 2015-01-29
+
+two:
+  daily_weight: 9.99
+  recorded_on: 2015-01-29

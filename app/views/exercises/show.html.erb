@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Performed on:</strong>
+  <%= @exercise.performed_on %>
+</p>
+
+<p>
+  <strong>Exercise type:</strong>
+  <%= @exercise.exercise_type %>
+</p>
+
+<p>
+  <strong>Exercise duration:</strong>
+  <%= @exercise.exercise_duration %>
+</p>
+
+<p>
+  <strong>Calorie burn:</strong>
+  <%= @exercise.calorie_burn %>
+</p>
+
+<%= link_to 'Edit', edit_exercise_path(@exercise) %> |
+<%= link_to 'Back', exercises_path %>

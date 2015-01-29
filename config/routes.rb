@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  resources :exercises
+
+  resources :calorie_consumptions
+
+  resources :step_counts
+
+  resources :weights
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
