@@ -3,6 +3,10 @@ class Weight < ActiveRecord::Base
   validates :daily_weight, length: {maximum: 5}
 
   def self.todays_weight
-    Weight.where(recorded_on: Date.today).first.daily_weight ||= 0.0
+    if Weight.where(recorded_on: Date.today).first
+      Weight.where(recorded_on: Date.today).first.daily_weight
+    else
+      0.0
+    end
   end
 end
