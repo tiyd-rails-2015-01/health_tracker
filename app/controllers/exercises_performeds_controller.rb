@@ -3,6 +3,7 @@ class ExercisesPerformedsController < ApplicationController
 
   def index
     @exercises_performeds = ExercisesPerformed.all
+    @total = ExercisesPerformed.total.to_f
   end
 
   def show

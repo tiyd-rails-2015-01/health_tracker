@@ -28,6 +28,10 @@
     <%= f.number_field :distance %>
   </div>
   <div class="field">
+    <%= f.label :distance %><br>
+    <%= f.select :distance, ["Miles","Kilometers",] %>
+  </div>
+  <div class="field">
     <%= f.label :calories_burned %><br>
     <%= f.number_field :calories_burned %>
   </div>
