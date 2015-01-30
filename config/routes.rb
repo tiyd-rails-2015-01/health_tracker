@@ -5,7 +5,8 @@ Rails.application.routes.draw do
 
   resources :exercises
 
-  get 'dashboard/index'
+  #get 'dashboard/index'
+  root '../dashboard/index.html?somenumber=<%=@total_amount%>'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
