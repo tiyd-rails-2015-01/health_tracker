@@ -1,8 +1,6 @@
 class HomeController < ApplicationController
   def home
-    @c_total= Calorie.c_total
-    @e_total= Exercise.e_total
-    @f_total= (Calorie.c_total.blank?) ? "Always eat before attempting exercise." : (Calorie.c_total-Exercise.e_total)
+    @total= Calorie.total - Exercise.total
   end
 end
 

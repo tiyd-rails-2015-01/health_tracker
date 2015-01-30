@@ -5,4 +5,11 @@
 <%= link_to 'Steps', steps_path %>
 <%= link_to 'Calories', calories_path %>
 <%= link_to 'Exercises', exercises_path %>
-<p>Total Calories <%= @f_total %>
+
+<p>
+  <% if @total.blank? %>
+    EAT SOMETHING
+  <% else %>
+    Total Calories <%= @total %>
+  <% end %>
+</p>
