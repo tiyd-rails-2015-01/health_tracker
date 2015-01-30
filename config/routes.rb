@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   resources :weights
   resources :steps
+  resources :calories
 
 
   # The priority is based upon order of creation: first created -> highest priority.
