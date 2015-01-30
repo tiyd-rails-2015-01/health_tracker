@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :calories_consumeds
+
   get 'home/dashboard'
 
   resources :weights
