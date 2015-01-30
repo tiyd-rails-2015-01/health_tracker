@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Steps</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Created at</th>
+      <th>Date</th>
+      <th>Steps taken</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @steps.each do |step| %>
+      <tr>
+        <td><%= step.created_at %> |</td>
+        <td><%= step.date %> |</td>
+        <td><%= step.steps_taken %> </td>
+        <td><%= link_to 'Show', step %></td>
+        <td><%= link_to 'Edit', edit_step_path(step) %></td>
+        <td><%= link_to 'Destroy', step, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<p> Your total steps taken to date: <%= @total_amount %></p>
+<br>
+
+<%= link_to 'New Step', new_step_path %>
+<%= link_to 'New Weight', new_weight_path %>
