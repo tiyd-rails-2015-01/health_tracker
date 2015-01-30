@@ -5,6 +5,7 @@ class WeightsController < ApplicationController
   # GET /weights.json
   def index
     @weights = Weight.all
+    @weight_amount = Weight.total
   end
 
   # GET /weights/1
