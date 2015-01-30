@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Calories</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Created at</th>
+      <th>Date</th>
+      <th>Meal</th>
+      <th>Calories</th>
+      <th colspan="4"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @calories.each do |calorie| %>
+    <tr>
+      <td><%= calorie.created_at %></td>
+      <td><%= calorie.date %></td>
+      <td><%= calorie.meal %></td>
+      <td><%= calorie.calories_consumed %></td>
+      <td><%= link_to 'Show', calorie %></td>
+      <td><%= link_to 'Edit', edit_calory_path(calorie) %></td>
+      <td><%= link_to 'Destroy', calorie, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Steps', new_step_path %>
+<%= link_to 'New Weight', new_weight_path %>
+<%= link_to 'New Calories', new_calory_path %>
