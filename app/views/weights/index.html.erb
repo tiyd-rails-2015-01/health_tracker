@@ -1,12 +1,12 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Weights</h1>
+<h1>Daily Weight</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Daily weight</th>
-      <th>Recorded on</th>
+      <th class="wheader">Daily Weight</th>
+      <th class="wheader">Recorded On</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -14,8 +14,8 @@
   <tbody>
     <% @weights.each do |weight| %>
       <tr>
-        <td><%= weight.daily_weight %></td>
-        <td><%= weight.recorded_on %></td>
+        <td class="wcount"><%= weight.daily_weight %></td>
+        <td class="wcount"><%= weight.recorded_on %></td>
         <td><%= link_to 'Show', weight %></td>
         <td><%= link_to 'Edit', edit_weight_path(weight) %></td>
         <td><%= link_to 'Destroy', weight, method: :delete, data: { confirm: 'Are you sure?' } %></td>
