@@ -5,8 +5,6 @@ class ExercisesController < ApplicationController
   # GET /exercises.json
   def index
     @exercises = Exercise.all
-    @calories_per_minute = Weight.calories_burned_per_minute
-
   end
 
   # GET /exercises/1

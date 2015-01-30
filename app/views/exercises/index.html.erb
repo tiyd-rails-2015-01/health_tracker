@@ -19,7 +19,7 @@
         <td><%= exercise.logged_on %></td>
         <td><%= exercise.exercise_performed %></td>
         <td><%= exercise.time_in_minutes %></td>
-        <td><%= @calories_per_minute * exercise.time_in_minutes %></td>
+        <td><%= exercise.calculate_calories %></td>
         <td><%= link_to 'Show', exercise %></td>
         <td><%= link_to 'Edit', edit_exercise_path(exercise) %></td>
         <td><%= link_to 'Destroy', exercise, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -32,4 +32,4 @@
 
 <%= link_to 'New Exercise', new_exercise_path %>
 
-<p> Number of calories burned:<%= @calories_per_minute %></p>
+<p></p>
