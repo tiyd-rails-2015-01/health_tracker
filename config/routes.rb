@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
 
+
   get 'dashboard/home'
+
+  resources :exercises
 
   resources :calories
 
