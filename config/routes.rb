@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
+  resources :joules
+
   get 'dashboard/status'
 
   resources :weights
-
-  resources :consumed_calories
-
+  
   resources :exercises
 
   resources :steps

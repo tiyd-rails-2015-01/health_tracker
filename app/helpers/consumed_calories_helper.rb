@@ -1,2 +1,0 @@
-module ConsumedCaloriesHelper
-end

@@ -3,7 +3,7 @@ class DashboardController < ApplicationController
     @total_exercises= Exercise.sum(:duration)
     @total_weight_lost= Weight.sum(:user_weight)
     @total_steps= Step.sum(:steps_taken)
-    @total_calories_consumed= ConsumedCalorie.sum(:calorie_amount)
+    @total_calories_consumed= Joule.sum(:consumed_joules)
 
     graph=[@total_exercises, @total_weight_lost, @total_steps, @total_calories_consumed]
     @total=graph.reduce(:+)

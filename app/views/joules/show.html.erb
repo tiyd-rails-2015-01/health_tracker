@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Consumed joules:</strong>
+  <%= @joule.consumed_joules %>
+</p>
+
+<p>
+  <strong>Added on:</strong>
+  <%= @joule.added_on %>
+</p>
+
+<%= link_to 'Edit', edit_joule_path(@joule) %> |
+<%= link_to 'Back', joules_path %>

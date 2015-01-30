@@ -1,0 +1,2 @@
+module JoulesHelper
+end
