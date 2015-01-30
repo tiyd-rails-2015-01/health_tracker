@@ -1,3 +1,4 @@
+
 class Calory < ActiveRecord::Base
 
 
