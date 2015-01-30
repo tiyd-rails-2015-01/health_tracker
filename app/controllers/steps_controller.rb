@@ -15,12 +15,19 @@ before_action :set_step, only: [:show, :edit, :update, :destroy]
   def edit
   end
 
+  def destroy
+    @step.destroy
+    respond_to do |format|
+      format.html { redirect_to steps_url, notice: 'Steps were successfully destroyed.' }
+    end
+  end
+
   def create
     @step = Step.new(step_params)
 
     respond_to do |format|
       if @step.save
-        format.html { redirect_to @step, notice: 'step was successfully created.' }
+        format.html { redirect_to @step, notice: 'Steps were successfully created.' }
       else
         format.html { render :new }
       end
