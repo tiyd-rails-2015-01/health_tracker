@@ -13,14 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20150130174627) do
 
-  create_table "consumed_calories", force: :cascade do |t|
-    t.integer  "calorie_amount"
-    t.string   "meal_type"
-    t.date     "consumed_on"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
-  end
-
   create_table "exercises", force: :cascade do |t|
     t.string   "exercise_type"
     t.integer  "duration"

@@ -23,4 +23,7 @@ class WeightsController < ApplicationController
   def update
   end
 
+  def weight_params
+    params.require(:weight).permit(:user_weight, :added_on)
+  end
 end
