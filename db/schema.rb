@@ -15,19 +15,10 @@ ActiveRecord::Schema.define(version: 20150130021843) do
 
   create_table "calories_consumeds", force: :cascade do |t|
     t.date     "date"
-    t.string   "food"
     t.integer  "calories"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-
-  create_table "exercises_performed", force: :cascade do |t|
-    t.date     "date"
-    t.string   "exercise_name"
-    t.integer  "reps_performed"
-    t.float    "distance"
-    t.integer  "calories_burned"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.string   "food"
   end
 
   create_table "exercises_performeds", force: :cascade do |t|
