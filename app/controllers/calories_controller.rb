@@ -47,7 +47,7 @@ class CaloriesController < ApplicationController
   def destroy
     @calorie.destroy
     respond_to do |format|
-      format.html { redirect_to calories_url, notice: 'Calories logged successfully.'}
+      format.html { redirect_to calories_url, notice: 'Calories deleted successfully.'}
     end
   end
 
@@ -56,6 +56,6 @@ class CaloriesController < ApplicationController
   end
 
   private def calorie_params
-      params.require(:calorie).permit(:logged_on, :steps_taken)
+      params.require(:calorie).permit(:logged_on, :calories_consumed)
   end
 end

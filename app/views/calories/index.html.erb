@@ -17,7 +17,7 @@
         <td><%= calorie.logged_on %></td>
         <td><%= calorie.calories_consumed %></td>
         <td><%= link_to 'Show', calorie %></td>
-        <td><%= link_to 'Edit', edit_step_path(step) %></td>
+        <td><%= link_to 'Edit', edit_calory_path(calorie) %></td>
         <td><%= link_to 'Destroy', calorie, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
@@ -26,4 +26,4 @@
 
 <br>
 
-<%= link_to 'Log Calories', new_calorie_path %>
+<%= link_to 'Log Calories', new_calory_path %>

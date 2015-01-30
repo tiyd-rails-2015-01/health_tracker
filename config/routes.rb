@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  get 'calories/_form'
+  resources :calories
 
   resources :steps
 
