@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class WeightTest < ActiveSupport::TestCase
+class WeightControllerTest < ActionController::TestCase
   # test "the truth" do
   #   assert true
   # end

@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   get 'dashboard/status'
 
+  resources :weights
+
   resources :consumed_calories
 
   resources :exercises
