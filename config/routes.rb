@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  resources :steps
+  resources :foods
 
-  resources :calories
+  resources :steps
 
   resources :exercises
 
