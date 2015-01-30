@@ -1,6 +1,6 @@
 class ExercisesController < ApplicationController
   before_action :set_exercise, only: [:show, :edit, :update, :destroy]
-
+  
   # GET /exercises
   # GET /exercises.json
   def index
@@ -10,6 +10,13 @@ class ExercisesController < ApplicationController
   # GET /exercises/1
   # GET /exercises/1.json
   def show
+    if Exercise.exercise_type == "Running"
+      @calories_burned = 0.083* Weight.user_weight * Exercise.duration
+    elsif Exercise.exercise_type == "Swimming"
+      @calories_burned = 0.03 * Weight.user_weight * Excercise.duration
+    elsif Exercise.exercise_type == "Biking"
+      @calories_burned = 0.06 * Weight.user_weight * Excercise.duration
+    end
   end
 
   # GET /exercises/new
@@ -20,6 +27,9 @@ class ExercisesController < ApplicationController
   # GET /exercises/1/edit
   def edit
   end
+
+
+
 
   # POST /exercises
   # POST /exercises.json

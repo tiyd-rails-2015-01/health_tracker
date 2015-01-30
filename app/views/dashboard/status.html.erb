@@ -7,12 +7,15 @@
 <%= render 'layouts/navigation' %>
 
 
+
 <h3>Progress</h3>
+
 
 <%if @total== 0 %>
   <h4>Please enter your stats to see your progress!</h4>
 
 <%else%>
+<p>Your most recent weight: <%= @latest_weight %> lbs </p>
   <ul class="chart">
     <li class="bar teal" style="height: <%=@weight_lost_percent %>%;">
       <div class="percent"><%=@total_weight_lost %>lbs</div>
