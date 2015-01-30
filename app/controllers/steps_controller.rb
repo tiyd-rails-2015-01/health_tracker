@@ -5,6 +5,7 @@ class StepsController < ApplicationController
   # GET /steps.json
   def index
     @steps = Step.all
+    @step_amount = Step.total  
   end
 
   # GET /steps/1
