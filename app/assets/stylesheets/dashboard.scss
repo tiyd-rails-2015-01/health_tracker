@@ -1,3 +1,106 @@
 // Place all the styles related to the dashboard controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+header {
+  float: left;
+}
+
+nav ul{
+  margin: 0;
+  padding: 0;
+  float: right;
+}
+nav ul li{
+  list-style: none;
+  float: left;
+
+}
+
+nav ul li a {
+  display: block;
+  color: gray;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 20px;
+  border-left:  solid 1px #333;
+}
+nav ul li a:hover {
+  background: #222;
+}
+nav ul li a:active {
+  -webkit-box-shadow: 0 0 5px rgba(0,0, 0, 0.9) inset;
+  -moz-box-shadow: 0 0 5px rgba(0,0, 0, 0.9) inset;
+  box-shadow: 0 0 5px rgba(0,0, 0, 0.9) inset;
+
+}
+
+
+h3 {
+  clear: both;
+  padding-top: 50px;
+  padding-bottom: 30px
+ }
+
+.chart {
+  clear: both;
+  background: url("http://cl.ly/QSpc/bg-chart.png") right top repeat-x;
+  height: 425px;
+  width: 100%;
+  margin: 0 auto -32px;
+}
+.chart li {
+  border-radius: 4px 4px 0 0; /* Remember vendor prefixes */
+  box-shadow: 0 1px 0 0 rgba(255,255,255,.6) inset; /* Remember vendor prefixes */
+  position: relative;
+  text-align: center;
+  vertical-align: bottom;
+  line-height: 35px;
+  padding: 0px 20px;
+  margin-bottom: 5px;
+  display: inline-block;
+  height: 425px;
+  margin: 0 1.8% 0 0;
+  width: 14%;
+}
+
+.chart .skill {
+  bottom: 20px;
+  font-size: 16px;
+  position: absolute;
+}
+
+
+.chart .label {
+  background: #eaeaea;
+  margin: -.6em 0 65px 0;
+}
+
+.chart .percent {
+  font-size: 30px;
+  letter-spacing: -3px;
+  opacity: .4;
+  width: 100%;
+}
+
+.chart .teal {
+  background: #4ecdc4;
+  background-image: linear-gradient(#76d8d1, #4ecdc4 70%);
+  border: 1px solid #4ecdc4;
+}
+
+.chart .blue {
+  background: #1e5799;
+  background-image: linear-gradient(#1e5799, #7db9e8 70%);
+  border: 1px solid #4ecdc4;
+}
+.chart .purple {
+  background: #cb60b3;
+  background-image: linear-gradient(#cb60b3, #db36b0 70%);
+  border: 1px solid #4ecdc4;
+}
+.chart .green {
+  background: #9dd53a;
+  background-image: linear-gradient(#9dd53a, #7cbc0a 70%);
+  border: 1px solid #4ecdc4;
+}

@@ -1,2 +1,36 @@
-<h1>Dashboard#status</h1>
-<p>Find me in app/views/dashboard/status.html.erb</p>
+<body>
+<header>
+<h1>Your Personal Health Tracker</h1>
+<h2>Dashboard</h2>
+</header>
+
+
+<div>
+  <nav>
+    <ul>
+      <li><%= link_to 'Home', dashboard_status_path %></li>
+      <li><%= link_to 'Exercises', exercises_path %></li>
+      <li><%= link_to 'Steps', steps_path %></li>
+      <li><%= link_to 'Weight', weights_path %></li>
+      <li><%= link_to 'Calories Consumed', consumed_calories_path	%></li>
+    </ul>
+  </nav>
+</div><!-- end container -->
+
+<h3>Progress</h3>
+<ul class="chart">
+  <li class="bar teal" style="height: 95%;" title="95">
+    <div class="percent"><%=@total_weight_lost %>lbs</div>
+    <div class="skill">Weight</div></li>
+  <li class="bar blue" style="height: 90%;" title="90">
+    <div class="percent"><%= @total_exercises %></div>
+    <div class="skill">Exercises</div></li>
+  <li class="bar purple" style="height: 80%;" title="80">
+    <div class="percent"><%=@total_steps %></div>
+    <div class="skill">Steps</div></li>
+  <li class="bar green" style="height: 75%;" title="75">
+    <div class="percent"><%=@total_calories_consumed %></div>
+    <div class="skill">Calories Consumed</div></li>
+</ul>
+
+</body>
