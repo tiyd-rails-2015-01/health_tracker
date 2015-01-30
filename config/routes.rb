@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
   resources :calories_consumeds
+  resources :steps_takens
 
   get 'home/dashboard'
 
   resources :weights
+  resources :exercises_performeds
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

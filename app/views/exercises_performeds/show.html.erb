@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @exercises_performed.date %>
+</p>
+
+<p>
+  <strong>Exercise Name:</strong>
+  <%= @exercises_performed.exercise_name %>
+</p>
+
+<p>
+  <strong>Reps Performed:</strong>
+  <%= @exercises_performed.reps_performed %>
+</p>
+
+<p>
+  <strong>Distance:</strong>
+  <%= @exercises_performed.distance %>
+</p>
+
+<p>
+  <strong>Calories Burned:</strong>
+  <%= @exercises_performed.calories_burned %>
+</p>
+
+
+
+
+<%= link_to 'Edit', edit_exercises_performed_path(@exercises_performed) %> |
+<%= link_to 'Back', exercises_performeds_path %>
