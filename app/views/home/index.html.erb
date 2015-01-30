@@ -5,6 +5,10 @@
 <p><%= link_to "Weight", weights_path %></p>
 <p><%= link_to "Step Counter", step_counts_path %></p>
 <p><%= link_to "Calorie Tracker", calorie_consumptions_path %></p>
-<p><%= link_to "Dail Exercise Journal", exercises_path %></p>
+<p><%= link_to "Daily Exercise Journal", exercises_path %></p>
 
-<p><%= @calorie_count %></p>
+<p>Your current caloric intake is: <%= @calorie_count %> calories.</p>
+
+<!-- <p>Your current number of steps taken is: <%= @step_counter %> steps.</p> -->
+
+<p>Your calories burned during today's exercise is: <%= @exercise_burn %> calories.</p>
