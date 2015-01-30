@@ -1,4 +1,4 @@
-class ExercisesPerformedController < ApplicationController
+class ExercisesPerformedsController < ApplicationController
   before_action :set_exercises_performed, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -47,6 +47,17 @@ class ExercisesPerformedController < ApplicationController
       format.html { redirect_to exercises_performeds_url, notice: 'Exercises performed was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  private
+  # Use callbacks to share common setup or constraints between actions.
+  def set_exercises_performed
+    @exercises_performed = ExercisesPerformed.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def exercises_performed_params
+    params.require(:exercises_performed).permit(:date, :exercise_name, :reps_performed, :distance, :calories_burned)
   end
 
 end

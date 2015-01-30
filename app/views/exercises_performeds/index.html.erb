@@ -19,6 +19,9 @@
       <tr>
         <td><%= exercises_performed.date %></td>
         <td><%= exercises_performed.exercise_name %></td>
+        <td><%= exercises_performed.reps_performed %></td>
+        <td><%= exercises_performed.distance %></td>
+        <td><%= exercises_performed.calories_burned %></td>
         <td><%= link_to 'Show', exercises_performed %></td>
         <td><%= link_to 'Edit', edit_exercises_performed_path(exercises_performed) %></td>
         <td><%= link_to 'Destroy', exercises_performed, method: :delete, data: { confirm: 'Are you sure?' } %></td>
