@@ -5,6 +5,7 @@ class StepCountsController < ApplicationController
   # GET /step_counts.json
   def index
     @step_counts = StepCount.all
+    @daily_steps = StepCount.steps_taken
   end
 
   # GET /step_counts/1
