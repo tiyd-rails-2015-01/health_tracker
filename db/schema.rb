@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150129194854) do
+ActiveRecord::Schema.define(version: 20150130212218) do
 
   create_table "calories", force: :cascade do |t|
     t.integer  "calories_consumed"
