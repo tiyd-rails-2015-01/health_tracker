@@ -5,7 +5,9 @@ class WeightsController < ApplicationController
   # GET /weights.json
   def index
     @weights = Weight.all
-    @exercise_performed = Exercise.last.exercise_performed
+    if @exercise_performed
+      @exercise_performed = Exercise.last.exercise_performed
+    end
   end
 
   # GET /weights/1
