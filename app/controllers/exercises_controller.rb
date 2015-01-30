@@ -25,7 +25,7 @@ before_action :set_exercise, only: [:show, :edit, :update, :destroy]
 
   def update
     respond_to do |format|
-      if @exercise.update(weight_params)
+      if @exercise.update(exercise_params)
         format.html { redirect_to @exercise, notice: 'Exercise was successfully updated.' }
       else
         format.html { render :edit }

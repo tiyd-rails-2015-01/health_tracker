@@ -24,7 +24,7 @@ before_action :set_step, only: [:show, :edit, :update, :destroy]
 
   def update
     respond_to do |format|
-      if @step.update(weight_params)
+      if @step.update(step_params)
         format.html { redirect_to @step, notice: 'Step was successfully updated.' }
       else
         format.html { render :edit }

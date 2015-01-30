@@ -24,7 +24,7 @@ class CaloriesController < ApplicationController
 
     def update
       respond_to do |format|
-        if @calorie.update(weight_params)
+        if @calorie.update(calorie_params)
           format.html { redirect_to @calorie, notice: 'Step was successfully updated.' }
         else
           format.html { render :edit }
