@@ -3,6 +3,7 @@ class CreateCaloriesConsumeds < ActiveRecord::Migration
     create_table :calories_consumeds do |t|
       t.date :date
       t.integer :calories
+      t.string :food
 
       t.timestamps null: false
     end

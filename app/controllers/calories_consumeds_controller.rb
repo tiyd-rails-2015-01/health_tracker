@@ -69,6 +69,6 @@ class CaloriesConsumedsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def calories_consumed_params
-      params.require(:calories_consumed).permit(:date, :calories)
+      params.require(:calories_consumed).permit(:date, :food, :calories)
     end
 end
