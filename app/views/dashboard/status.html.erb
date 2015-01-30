@@ -10,19 +10,30 @@
 
 <h3>Progress</h3>
 
+<%if @entered_weight >0 %>
+  <p>Your most recent weight: <%= @latest_weight %> lbs </p>
+<%end%>
+
+
+<%if @total_exercises >0 && @total_calories_consumed>0 %>
+  <p>Your net calories are: <%= @net_calories %> </p>
+<%else%>
+  <p>Please enter weight, exercises performed and calories consumed to see your net calories </p>
+<%end%>
+
+
+
 
 <%if @total== 0 %>
   <h4>Please enter your stats to see your progress!</h4>
-
 <%else%>
-<p>Your most recent weight: <%= @latest_weight %> lbs </p>
   <ul class="chart">
     <li class="bar teal" style="height: <%=@weight_lost_percent %>%;">
       <div class="percent"><%=@total_weight_lost %>lbs</div>
       <div class="activity">Weight Lost</div></li>
     <li class="bar blue" style="height: <%=@exercises_percent %>%;">
       <div class="percent"><%= @total_exercises %></div>
-      <div class="activity">Exercises</div></li>
+      <div class="activity">Minutes Exercised</div></li>
     <li class="bar purple" style="height: <%=@steps_percent %>%;">
       <div class="percent"><%=@total_steps %></div>
       <div class="activity">Steps</div></li>
