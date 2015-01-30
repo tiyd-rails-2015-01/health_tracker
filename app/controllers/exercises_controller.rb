@@ -23,6 +23,16 @@ before_action :set_exercise, only: [:show, :edit, :update, :destroy]
     end
   end
 
+  def update
+    respond_to do |format|
+      if @exercise.update(weight_params)
+        format.html { redirect_to @exercise, notice: 'Exercise was successfully updated.' }
+      else
+        format.html { render :edit }
+      end
+    end
+  end
+
   def create
     @exercise = Exercise.new(exercise_params)
 

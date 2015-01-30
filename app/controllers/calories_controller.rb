@@ -22,6 +22,16 @@ class CaloriesController < ApplicationController
       end
     end
 
+    def update
+      respond_to do |format|
+        if @calorie.update(weight_params)
+          format.html { redirect_to @calorie, notice: 'Step was successfully updated.' }
+        else
+          format.html { render :edit }
+        end
+      end
+    end
+
     def create
       @calorie = Calorie.new(calorie_params)
 
