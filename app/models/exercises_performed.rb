@@ -7,4 +7,14 @@ class ExercisesPerformed < ActiveRecord::Base
 
   end
 
+  def self.calories_burned_today
+    sum = 0
+    ExercisesPerformed.all.each do |s|
+      if s.date == Date.today
+        sum += s.calories_burned
+      end
+    end
+    sum
+  end
+
 end

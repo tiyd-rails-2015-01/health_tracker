@@ -2,8 +2,9 @@ class ExercisesPerformedsController < ApplicationController
   before_action :set_exercises_performed, only: [:show, :edit, :update, :destroy]
 
   def index
-    @exercises_performeds = ExercisesPerformed.all
+    @exercises_performeds = ExercisesPerformed.all.order(:date)
     @total = ExercisesPerformed.total.to_f
+    @calories_burned = ExercisesPerformed.calories_burned_today
   end
 
   def show
