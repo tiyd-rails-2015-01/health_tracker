@@ -16,7 +16,7 @@ class ExercisesPerformedController < ApplicationController
   end
 
   def create
-    @exercises_performed = StepsTaken.new(steps_taken_params)
+    @exercises_performed = ExercisesPerformed.new(exercises_performed_params)
 
     respond_to do |format|
       if @exercises_performed.save
@@ -31,7 +31,7 @@ class ExercisesPerformedController < ApplicationController
 
   def update
     respond_to do |format|
-      if @exercises_performed.update(steps_taken_params)
+      if @exercises_performed.update(exercises_performed_params)
         format.html { redirect_to @exercises_performed, notice: 'Exercises performed was successfully updated.' }
         format.json { render :show, status: :ok, location: @exercises_performed }
       else
