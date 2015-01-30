@@ -8,20 +8,24 @@
 
 
 <h3>Progress</h3>
-<!--
-<ul class="chart">
-  <li class="bar teal" style="height: 95%;" title="95">
-    <div class="percent"><%=@graph[0] %>lbs</div>
-    <div class="skill">Weight Lost</div></li>
-  <li class="bar blue" style="height: 90%;" title="90">
-    <div class="percent"><%= @graph[1] %></div>
-    <div class="skill">Exercises</div></li>
-  <li class="bar purple" style="height: 80%;" title="80">
-    <div class="percent"><%=@graph[2] %></div>
-    <div class="skill">Steps</div></li>
-  <li class="bar green" style="height: 75%;" title="75">
-    <div class="percent"><%=@graph[3] %></div>
-    <div class="skill">Calories Consumed</div></li>
-</ul> -->
 
+<%if @total== 0 %>
+  <h4>Please enter your stats to see your progress!</h4>
+
+<%else%>
+  <ul class="chart">
+    <li class="bar teal" style="height: <%=@weight_lost_percent %>%;">
+      <div class="percent"><%=@total_weight_lost %>lbs</div>
+      <div class="skill">Weight Lost</div></li>
+    <li class="bar blue" style="height: <%=@exercises_percent %>%;">
+      <div class="percent"><%= @total_exercises %></div>
+      <div class="skill">Exercises</div></li>
+    <li class="bar purple" style="height: <%=@steps_percent %>%;">
+      <div class="percent"><%=@total_steps %></div>
+      <div class="skill">Steps</div></li>
+    <li class="bar green" style="height: <%=@calories_percent %>%;">
+      <div class="percent"><%=@total_calories_consumed %></div>
+      <div class="skill">Calories Consumed</div></li>
+  </ul>
+<%end%>
 </body>
