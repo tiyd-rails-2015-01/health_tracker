@@ -1,8 +1,12 @@
 class DashboardController < ApplicationController
   def status
-    @total_exercises= Exercise.count
-    @total_weight_lost= Weight.count
-    @total_steps= Step.count
-    @total_calories_consumed= ConsumedCalorie.count
+    @total_exercises= Exercise.sum(:duration)
+    @total_weight_lost= Weight.sum(:user_weight)
+    @total_steps= Step.sum(:steps_taken)
+    @total_calories_consumed= ConsumedCalorie.sum(:calorie_amount)
+
+    # graph={@total_exercises, @total_weight_lost, @total_steps, @total_calories_consumed}
+    # @graph=graph.sort
+    # @graph[0]="height: 95%;"
   end
 end
