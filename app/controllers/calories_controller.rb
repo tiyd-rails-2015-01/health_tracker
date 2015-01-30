@@ -5,6 +5,7 @@ class CaloriesController < ApplicationController
   # GET /calories.json
   def index
     @calories = Calory.all
+    @calories_consumed = Calory.total
   end
 
   # GET /calories/1
