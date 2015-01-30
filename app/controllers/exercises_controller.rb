@@ -6,9 +6,10 @@ class ExercisesController < ApplicationController
 
   def index
     @exercises = Exercise.all
-    @pushups_total = Exercise.new
-    @situps_total = Exercise.all
-    @squat_thrusts_total = Exercise.all
+    @calories_total = Exercise.total_calories
+    @pushups_total = Exercise.exercise_count("pushups")
+    @situps_total = Exercise.exercise_count("situps")
+    @squat_thrusts_total = Exercise.exercise_count("squat thrusts")
   end
 
   # GET /exercises/1
