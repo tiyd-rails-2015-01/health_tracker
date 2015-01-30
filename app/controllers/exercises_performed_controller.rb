@@ -1,0 +1,2 @@
+class ExercisesPerformedController < ApplicationController
+end
