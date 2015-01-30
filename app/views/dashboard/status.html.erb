@@ -6,20 +6,22 @@
 
 <%= render 'layouts/navigation' %>
 
+
 <h3>Progress</h3>
+<!--
 <ul class="chart">
   <li class="bar teal" style="height: 95%;" title="95">
-    <div class="percent"><%=@total_weight_lost %>lbs</div>
-    <div class="skill">Weight</div></li>
+    <div class="percent"><%=@graph[0] %>lbs</div>
+    <div class="skill">Weight Lost</div></li>
   <li class="bar blue" style="height: 90%;" title="90">
-    <div class="percent"><%= @total_exercises %></div>
+    <div class="percent"><%= @graph[1] %></div>
     <div class="skill">Exercises</div></li>
   <li class="bar purple" style="height: 80%;" title="80">
-    <div class="percent"><%=@total_steps %></div>
+    <div class="percent"><%=@graph[2] %></div>
     <div class="skill">Steps</div></li>
   <li class="bar green" style="height: 75%;" title="75">
-    <div class="percent"><%=@total_calories_consumed %></div>
+    <div class="percent"><%=@graph[3] %></div>
     <div class="skill">Calories Consumed</div></li>
-</ul>
+</ul> -->
 
 </body>
