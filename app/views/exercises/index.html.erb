@@ -1,14 +1,17 @@
 <p id="notice"><%= notice %></p>
-
-<h1>Listing Exercises</h1>
+<body style="background: #EEFFFF;">
+<h1><font color="red">Daily Exercise Tracker</font></h1>
+<h2>Please fill in the information below:</h2>
+<h3>Use the following to calculate calories burned.</h3>
+<div><p>10 situps = 50 cal. 10 pushups = 100 cal. 10 squat thrust = 200 cal.</p></div>
 
 <table>
   <thead>
     <tr>
       <th>Exercise amount</th>
       <th>Exercise type</th>
-      <th>Exercise on</th>
-      <th>Calories consumed</th>
+      <th>Date of exercise</th>
+      <th>Calories Burned</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -31,3 +34,9 @@
 <br>
 
 <%= link_to 'New Exercise', new_exercise_path %>
+<div>
+  <p><h4>Your total pushups:<%= @pushups_total %></h4><p>
+  <p><h4>Your total situps:<%= @situps_total %></h4><p>
+  <p><h4>Your total squat thrusts:<%= @squat_thrusts_total %></h4><p>
+    <p><h4>Your total calories burned:<%= @calories_total %></h4><p>
+<div>

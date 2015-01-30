@@ -3,8 +3,12 @@ class ExercisesController < ApplicationController
 
   # GET /exercises
   # GET /exercises.json
+
   def index
     @exercises = Exercise.all
+    @pushups_total = Exercise.new
+    @situps_total = Exercise.all
+    @squat_thrusts_total = Exercise.all
   end
 
   # GET /exercises/1
