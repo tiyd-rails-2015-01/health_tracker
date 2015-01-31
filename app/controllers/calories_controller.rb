@@ -7,6 +7,7 @@ class CaloriesController < ApplicationController
 
   def index
     @calories = Calorie.all
+    @daiy_calories = Calorie.daily_calories
   end
 
   def new

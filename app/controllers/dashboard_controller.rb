@@ -31,6 +31,8 @@ class DashboardController < ApplicationController
       @time = 0
     end
 
+    @daily_calories = Calorie.daily_calories
+
   #  @total_calories = (Exercise.calculate_calories) - (Calorie.calories_consumed)
   end
 

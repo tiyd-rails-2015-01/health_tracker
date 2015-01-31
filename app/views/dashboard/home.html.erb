@@ -19,4 +19,7 @@
 <span> Your most recent workout: </span><span><%="You did some #{@exercise} for #{@time} minutes."%></span>
 <br>
 <%= link_to 'New Exercise', new_exercise_path %>
+<br>
+
+<%= "Your total daily calorie intake is : #{@daily_calories}" %>
 </body>
