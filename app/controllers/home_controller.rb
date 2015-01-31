@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def home
-    @steps_total = "banana"
+    @steps_total 
 
   end
 end

@@ -15,5 +15,5 @@
   <%= @calorie.calories_consumed %>
 </p>
 
-<%= link_to 'Edit', edit_calory_path(@calorie) %> |
-<%= link_to 'Back', calories_path %>
+<%= link_to '<button type="button">Edit</button>' .html_safe, edit_calory_path(@calorie) %> |
+<%= link_to '<button type="button">Back</button>' .html_safe, calories_path %>

@@ -15,8 +15,33 @@
  */
  body {
    background-color: #82CCE2;
-   color: #333;
+   color: #000000;
    font-family: verdana, arial, helvetica, sans-serif;
-   font-size: 13px;
+   font-size: 16px;
    line-height: 18px;
+ }
+
+ h1 {
+   color: #B34B46;
+   text-shadow: black 0 -1px;
+ }
+
+ h3 {
+   color: #D4817D;
+ }
+
+ p {
+   text-indent: 1.5em;
+ }
+
+ #intro {
+   text-indent: 0em;
+   font-style: italic;
+ }
+
+ button {
+   background-color: #D4817D;
+   color: #050505;
+   border-radius: 8px;
+   font-weight: bold;
  }
