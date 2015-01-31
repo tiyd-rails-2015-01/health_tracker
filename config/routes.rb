@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
   resources :exercises
 
+  resources :weights
+
   #get 'dashboard/index'
   root 'dashboard#index'
   #.html?somenumber=<%=@total_amount%>
