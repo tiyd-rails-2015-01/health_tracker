@@ -13,6 +13,28 @@
  *= require_tree .
  *= require_self
  */
-.homelink {
+/*.mainlinks {
   font-weight: bold;
+  color: navy;
+  margin-left: 40px;
+}*/
+.outcome {
+  font-weight: bold;
+}
+
+a:link {
+  color: navy;
+}
+
+a:visited {
+  color: purple;
+}
+
+body {
+  background-color: beige;
+  margin-left: 40px;
+}
+h1 {
+  color: navy;
+  margin-left: 0px;
 }

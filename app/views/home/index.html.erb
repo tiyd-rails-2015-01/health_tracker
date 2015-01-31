@@ -2,17 +2,17 @@
 
 <h1>Fitness Tracker</h1>
 
-<h3><%= link_to "Weight", weights_path %></h3>
-<h3><%= link_to "Step Counter", step_counts_path %></h3>
-<h3><%= link_to "Calorie Tracker", calorie_consumptions_path %></h3>
-<h3><%= link_to "Daily Exercise Journal", exercises_path %></h3>
+<h3 class="mainlinks"><%= link_to "Weight", weights_path %></h3>
+<h3 class="mainlinks"><%= link_to "Step Counter", step_counts_path %></h3>
+<h3 class="mainlinks"><%= link_to "Calorie Tracker", calorie_consumptions_path %></h3>
+<h3 class="mainlinks"><%= link_to "Daily Exercise Journal", exercises_path %></h3>
 
-<p>Your current caloric intake is: <%= @calorie_count %> calories.</p>
+<p>Your current caloric intake is: <strong><%= @calorie_count %></strong> calories.</p>
 
-<p>Your current number of steps taken is: <%= @daily_steps %> steps.</p>
+<p>Your current number of steps taken is: <strong><%= @daily_steps %></strong> steps.</p>
 
-<p>Your calories burned during today's exercise is: <%= @exercise_burn %> calories.</p>
+<p>Your calories burned during today's exercise is: <strong><%= @exercise_burn %></strong> calories.</p>
 
-<p>Your calories burned by walking today are: <%= @step_count_burn %> calories.</p>
+<p>Your calories burned by walking today are: <strong><%= @step_count_burn %></strong> calories.</p>
 
-<p>Your total calories for today are: <%= @todays_calories.round(2) %> calories.</p>
+<p>Your total calories for today are: <strong><%= @todays_calories.round(2) %></strong> calories.</p>
