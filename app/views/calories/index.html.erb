@@ -1,15 +1,16 @@
 <style>
 body {background-color: #EEFFFF}
-</style>
-<style>
+body {text-align: center}
+table {text-align: center}
 h1 {color: red}
 </style>
 
+<body>
 <p id="notice"><%= notice %></p>
 
 <h1>Listing Calories</h1>
 
-<table>
+<center><table>
   <thead>
     <tr>
       <th>Calories consumed</th>
@@ -29,7 +30,7 @@ h1 {color: red}
       </tr>
     <% end %>
   </tbody>
-</table>
+</table></center>
 
 <br>
 
@@ -39,5 +40,6 @@ h1 {color: red}
 </div>
 
 <div>
-  <p> Your total calories (even though you don't want to think about it): <%= @calories_consumed %></p>
+  <h2> Your total calories (even though you don't want to think about it): <%= @calories_consumed %></h2>
 </div>
+</body>
