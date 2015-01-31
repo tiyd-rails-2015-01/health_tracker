@@ -1,14 +1,12 @@
+
 <h1>HealthTracker</h1>
 <h3>Your Health Snapshot</h3>
-<p>  </p>
-<p>  </p>
-<p>  </p>
+
 <p><strong>Steps Walked To Date:    </strong><%= @steps_total %></p>
 <p><strong>Calories Consumed To Date:    </strong><%=         %></p>
 <p><strong>Calories Burned To Date:    </strong><%=         %></p>
 <p><strong>Calories Consumed vs. Burned:    </strong><%=         %></p>
 <p>&nbsp;</p>
-
 
 <p id="intro">Follow the links below to enter your data</p>
 <%= link_to '<button type="button">Steps</button>' .html_safe, steps_path %>
