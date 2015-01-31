@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Exercise</h1>
+<h1>Exercise</h1>
 
 <table>
   <thead>
@@ -31,8 +31,8 @@
 <p> Your total calories burned to date: <%= @calories_burned_total %></p>
 <br>
 
-<%= link_to 'New Steps', new_step_path %>
-<%= link_to 'New Weight', new_weight_path %>
-<%= link_to 'New Exercise', new_exercise_path %>
-<%= link_to 'New Calories', new_calory_path %>
-<%= link_to 'Home', root_path %>
+<%= link_to '<button type="button">New Steps</button>' .html_safe, new_step_path %>
+<%= link_to '<button type="button">New Weight</button>' .html_safe, new_weight_path %>
+<%= link_to '<button type="button">New Exercise</button>' .html_safe, new_exercise_path %>
+<%= link_to '<button type="button">New Calories</button>' .html_safe, new_calory_path %>
+<%= link_to '<button type="button">Home</button>' .html_safe, root_path %>
