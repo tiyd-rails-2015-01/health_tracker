@@ -1,16 +1,16 @@
-<h1>Health Tracker Home Page</h1>
-<h2>Your health Snapshot</h2>
+<h1>HealthTracker</h1>
+<h3>Your Health Snapshot</h3>
 <p>  </p>
 <p>  </p>
 <p>  </p>
-<p>steps walked to date:          <%= @steps_total %></p>
-<p>calories consumed to date:     <%=         %></p>
-<p>calories burned to date:       <%=         %></p>
-<p>calories consumed vs. Burned:  <%=         %></p>
+<p><strong>Steps Walked To Date:    </strong><%= @steps_total %></p>
+<p><strong>Calories Consumed To Date:    </strong><%=         %></p>
+<p><strong>Calories Burned To Date:    </strong><%=         %></p>
+<p><strong>Calories Consumed vs. Burned:    </strong><%=         %></p>
+<p>&nbsp;</p>
 
 
-
-<p>Follow the links below to enter your data</p>
+<p id="intro">Follow the links below to enter your data</p>
 <%= link_to '<button type="button">Steps</button>' .html_safe, steps_path %>
 <%= link_to '<button type="button">Weight</button>' .html_safe, weights_path %>
 <%= link_to '<button type="button">Calories</button>' .html_safe, calories_path %>

@@ -18,9 +18,9 @@
         <td><%= weight.created_at %> |</td>
         <td><%= weight.recorded_on %> |</td>
         <td><%= weight.weight %></td>
-        <td><%= link_to 'Show', weight %></td>
-        <td><%= link_to 'Edit', edit_weight_path(weight) %></td>
-        <td><%= link_to 'Destroy', weight, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '<button type="button">Show</button>' .html_safe, weight %></td>
+        <td><%= link_to '<button type="button">Edit</button>' .html_safe, edit_weight_path(weight) %></td>
+        <td><%= link_to '<button type="button">Destroy</button>' .html_safe, weight, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

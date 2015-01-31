@@ -20,15 +20,14 @@
         <td><%= exercise.date %>  |</td>
         <td><%= exercise.type_of_exercise %> |</td>
         <td><%= exercise.calories_burned%> </td>
-        <td><%= link_to 'Show', exercise %></td>
-        <td><%= link_to 'Edit', edit_exercise_path(exercise) %></td>
-        <td><%= link_to 'Destroy', exercise, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '<button type="button">Show</button>' .html_safe, exercise %></td>
+        <td><%= link_to '<button type="button">Edit</button>' .html_safe, edit_exercise_path(exercise) %></td>
+        <td><%= link_to '<button type="button">Destroy</button>' .html_safe, exercise, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-<p> Your total steps taken to date: <%= @steps_total %></p>
-<p> Your total calories burned to date: <%= @calories_burned_total %></p>
+<p><strong>Your total calories burned to date: </strong><%= @calories_burned_total %></p>
 <br>
 
 <%= link_to '<button type="button">New Steps</button>' .html_safe, new_step_path %>

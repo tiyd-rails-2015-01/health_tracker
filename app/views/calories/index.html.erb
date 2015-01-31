@@ -20,14 +20,14 @@
       <td><%= calorie.date %> |</td>
       <td><%= calorie.meal %> |</td>
       <td><%= calorie.calories_consumed %></td>
-      <td><%= link_to 'Show', calorie %></td>
-      <td><%= link_to 'Edit', edit_calory_path(calorie) %></td>
-      <td><%= link_to 'Destroy', calorie, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <td><%= link_to '<button type="button">Show</button>' .html_safe, calorie %></td>
+      <td><%= link_to '<button type="button">Edit</button>' .html_safe, edit_calory_path(calorie) %></td>
+      <td><%= link_to '<button type="button">Destroy</button>' .html_safe, calorie, method: :delete, data: { confirm: 'Are you sure?' } %></td>
     </tr>
     <% end %>
   </tbody>
 </table>
-  <p><strong>Your total calories consumed to date:</strong> <%= @total_amount %></p>
+  <p><strong>Your total calories consumed to date: </strong><%= @total_amount %></p>
 <br>
 
 <%= link_to '<button type="button">New Steps</button>' .html_safe, new_step_path %>
