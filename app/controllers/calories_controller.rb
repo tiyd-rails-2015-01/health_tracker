@@ -5,6 +5,11 @@ class CaloriesController < ApplicationController
   # GET /calories.json
   def index
     @calories = Calorie.all
+    total =  0
+    @calories.each do |calorie|
+      total += calorie.calories_consumed unless calorie.calories_consumed.nil?
+    end
+    @total_amount = total
   end
 
   # GET /calories/1
@@ -19,6 +24,7 @@ class CaloriesController < ApplicationController
 
   # GET /calories/1/edit
   def edit
+    @calorie = Calorie.new(params[:meal_selector])
   end
 
   # POST /calories
@@ -69,6 +75,6 @@ class CaloriesController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def calorie_params
-    params.require(:calorie).permit(:date, :meal, :calories_consumed,)
+    params.require(:calorie).permit(:date, :meal, :calories_consumed)
   end
 end

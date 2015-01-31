@@ -17,7 +17,7 @@
 </div>
 <div class="field">
   <%= f.label :meal %><br>
-  <%= f.text_field :meal %>
+  <%= select_tag "meal_selector", options_for_select(["Breakfast", "Lunch", "Dinner", "Snack"]), {include_blank: true} %>
 </div>
 <div class="field">
   <%= f.label :calories_consumed %><br>
