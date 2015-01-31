@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Daily weight:</strong>
+  <%= @weight.daily_weight %>
+</p>
+
+<p>
+  <strong>Recorded on:</strong>
+  <%= @weight.recorded_on %>
+</p>
+
+<%= link_to 'Edit', edit_weight_path(@weight) %> |
+<%= link_to 'Back', weights_path %>

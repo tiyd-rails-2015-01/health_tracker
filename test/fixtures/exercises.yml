@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  performed_on: 2015-01-29 18:45:24
+  exercise_type: MyString
+  exercise_duration: 
+  calorie_burn: 1
+
+two:
+  performed_on: 2015-01-29 18:45:24
+  exercise_type: MyString
+  exercise_duration: 
+  calorie_burn: 1

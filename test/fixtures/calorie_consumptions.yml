@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  consumed_on: 2015-01-29 18:44:15
+  food: MyString
+  calorie_intake: 1
+
+two:
+  consumed_on: 2015-01-29 18:44:15
+  food: MyString
+  calorie_intake: 1
