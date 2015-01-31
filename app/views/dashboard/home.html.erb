@@ -4,12 +4,19 @@
 
 
 <h2> Take a look at your latest data entries. </h2>
-<span> Your most recent Weight: </span>
-<p><%= @weight %></p>
+<span> Your most recent Weight: </span><span><%= @weight %></span>
 <br>
-<span> Your most recent Steps logged: </span>
-<p><%= @step %></p>
+<%= link_to 'Add New Weight', new_weight_path %></span>
 <br>
-<span> Your most recent Calorie intake: </span>
-<p><%= @calories %></p>
+<span> Your most recent Steps logged: </span><span><%= @step %></span>
+<br>
+<%= link_to 'Log Steps', new_step_path %>
+<br>
+<span> Your most recent Calorie intake: </span><span><%= @calories %></span>
+<br>
+<%= link_to 'Log Calories', new_calory_path %>
+<br>
+<span> Your most recent workout: </span><span><%="You did some #{@exercise} for #{@time} minutes."%></span>
+<br>
+<%= link_to 'New Exercise', new_exercise_path %>
 </body>

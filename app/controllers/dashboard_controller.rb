@@ -18,6 +18,20 @@ class DashboardController < ApplicationController
     else
       @calories = 0
     end
+
+    if @exercise = Exercise.last
+      @exercise = Exercise.last.exercise_performed
+    else
+      @exercise = 0
+    end
+
+    if @time = Exercise.last
+      @time = Exercise.last.time_in_minutes
+    else
+      @time = 0
+    end
+
+  #  @total_calories = (Exercise.calculate_calories) - (Calorie.calories_consumed)
   end
 
 end
