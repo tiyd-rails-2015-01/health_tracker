@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Calories</h1>
+<h1>Calories</h1>
 
 <table>
   <thead>
@@ -27,10 +27,10 @@
     <% end %>
   </tbody>
 </table>
-
+  <p><strong>Your total calories consumed to date:</strong> <%= @total_amount %></p>
 <br>
 
 <%= link_to 'New Steps', new_step_path %>
 <%= link_to 'New Weight', new_weight_path %>
-<%= link_to 'New Calorie', new_calory_path %>
 <%= link_to 'New Exercise', new_exercise_path %>
+<%= link_to 'New Calories', new_calory_path %>

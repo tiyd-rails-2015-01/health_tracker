@@ -1,1 +1,1 @@
-json.extract! @calorie, :id, :created_at, :calorie, :created_at, :updated_at
+json.extract! @calorie, :id, :date, :meal, :calories_consumed, :created_at, :updated_at
