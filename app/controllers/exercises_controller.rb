@@ -9,7 +9,7 @@ class ExercisesController < ApplicationController
     @exercises.each do |exercise|
       total += exercise.calories_burned unless exercise.calories_burned.nil?
     end
-    @total_amount = total
+    @calories_burned_total = total
   end
 
   # GET /exercises/1

@@ -9,7 +9,7 @@ class StepsController < ApplicationController
     @steps.each do |step|
       total += step.steps_taken unless step.steps_taken.nil?
     end
-    @total_amount = total
+    @steps_total = total
   end
 
   # GET /steps/1
