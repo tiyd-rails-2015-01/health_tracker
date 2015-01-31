@@ -1,2 +1,2 @@
-module ExerciseHelper
+module ExercisesHelper
 end

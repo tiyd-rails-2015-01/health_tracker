@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Exercise</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Created at</th>
+      <th>Date</th>
+      <th>Exercise</th>
+      <th>Calories Burned</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @exercises.each do |exercise| %>
+      <tr>
+        <td><%= exercise.created_at %> |</td>
+        <td><%= exercise.date %>  |</td>
+        <td><%= exercise.type_of_exercise %> |</td>
+        <td><%= exercise.calories_burned%> </td>
+        <td><%= link_to 'Show', exercise %></td>
+        <td><%= link_to 'Edit', edit_exercise_path(exercise) %></td>
+        <td><%= link_to 'Destroy', exercise, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<p> Your total calories burned to date: <%= @total_amount %></p>
+<br>
+
+<%= link_to 'New Step', new_step_path %>
+<%= link_to 'New Weight', new_weight_path %>
+<%= link_to 'New Exercise', new_exercise_path %>
+<%= link_to 'New Calorie', new_calory_path %>

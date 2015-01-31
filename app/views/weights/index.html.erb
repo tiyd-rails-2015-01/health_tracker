@@ -15,8 +15,8 @@
   <tbody>
     <% @weights.each do |weight| %>
       <tr>
-        <td><%= weight.created_at %></td>
-        <td><%= weight.recorded_on %></td>
+        <td><%= weight.created_at %> |</td>
+        <td><%= weight.recorded_on %> |</td>
         <td><%= weight.weight %></td>
         <td><%= link_to 'Show', weight %></td>
         <td><%= link_to 'Edit', edit_weight_path(weight) %></td>
@@ -30,3 +30,5 @@
 
 <%= link_to 'New Step', new_step_path %>
 <%= link_to 'New Weight', new_weight_path %>
+<%= link_to 'New Exercise', new_exercise_path %>
+<%= link_to 'New Calorie', new_calory_path %>

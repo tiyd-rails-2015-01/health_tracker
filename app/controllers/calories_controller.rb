@@ -1,28 +1,28 @@
 class CaloriesController < ApplicationController
   before_action :set_calorie, only: [:show, :edit, :update, :destroy]
 
-  # GET /weights
-  # GET /weights.json
+  # GET /calories
+  # GET /calories.json
   def index
     @calories = Calorie.all
   end
 
-  # GET /weights/1
-  # GET /weights/1.json
+  # GET /calories/1
+  # GET /calories/1.json
   def show
   end
 
-  # GET /weights/new
+  # GET /calories/new
   def new
     @calorie = Calorie.new
   end
 
-  # GET /weights/1/edit
+  # GET /calories/1/edit
   def edit
   end
 
-  # POST /weights
-  # POST /weights.json
+  # POST /calories
+  # POST /calories.json
   def create
     @calorie = Calorie.new(calorie_params)
 
@@ -37,11 +37,11 @@ class CaloriesController < ApplicationController
     end
   end
 
-  # PATCH/PUT /weights/1
-  # PATCH/PUT /weights/1.json
+  # PATCH/PUT /calories/1
+  # PATCH/PUT /calories/1.json
   def update
     respond_to do |format|
-      if @weight.update(weight_params)
+      if @calorie.update(calorie_params)
         format.html { redirect_to @calorie, notice: 'Calorie was successfully updated.' }
         format.json { render :show, status: :ok, location: @calorie }
       else
@@ -51,8 +51,8 @@ class CaloriesController < ApplicationController
     end
   end
 
-  # DELETE /weights/1
-  # DELETE /weights/1.json
+  # DELETE /calories1
+  # DELETE /calories/1.json
   def destroy
     @calorie.destroy
     respond_to do |format|
@@ -69,6 +69,6 @@ class CaloriesController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def calorie_params
-    params.require(:calorie).permit(:recorded_on, :calorie)
+    params.require(:calorie).permit(:date, :meal, :calories_consumed,)
   end
 end
