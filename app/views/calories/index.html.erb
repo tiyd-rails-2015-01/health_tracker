@@ -16,9 +16,9 @@
   <tbody>
     <% @calories.each do |calorie| %>
     <tr>
-      <td><%= calorie.created_at %></td>
-      <td><%= calorie.date %></td>
-      <td><%= calorie.meal %></td>
+      <td><%= calorie.created_at %> |</td>
+      <td><%= calorie.date %> |</td>
+      <td><%= calorie.meal %> |</td>
       <td><%= calorie.calories_consumed %></td>
       <td><%= link_to 'Show', calorie %></td>
       <td><%= link_to 'Edit', edit_calory_path(calorie) %></td>
@@ -32,4 +32,5 @@
 
 <%= link_to 'New Steps', new_step_path %>
 <%= link_to 'New Weight', new_weight_path %>
-<%= link_to 'New Calories', new_calory_path %>
+<%= link_to 'New Calorie', new_calory_path %>
+<%= link_to 'New Exercise', new_exercise_path %>

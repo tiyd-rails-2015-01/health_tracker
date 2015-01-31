@@ -5,18 +5,11 @@ class StepsController < ApplicationController
   # GET /steps.json
   def index
     @steps = Step.all
-
-
     total = 0
     @steps.each do |step|
       total += step.steps_taken unless step.steps_taken.nil?
     end
     @total_amount = total
-    # @accounts = Account.all
-    # total = 0
-    # @accounts.each do |transaction|
-    #   total += transaction.amount unless transaction.amount.nil?
-    # end
   end
 
   # GET /steps/1
