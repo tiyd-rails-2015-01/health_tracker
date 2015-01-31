@@ -3,6 +3,31 @@
 <p>Your steps and exercise together have burned <%= @combined_burn %> calories.</p>
 
 <p>Therefore, your net calorie consumption is <%=@net %>.</p>
+
+
+
+<p>Today, you ate:</p>
+<table>
+  <thead>
+    <tr>
+      <th>Eaten on</th>
+      <th>Description</th>
+      <th>Calories</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @todays_foods.each do |food| %>
+      <tr>
+        <td><%= food.eaten_on %></td>
+        <td><%= food.description %></td>
+        <td><%= food.calories %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
 <p>Choose which activity you are tracking.</p>
 <%= link_to 'New Exercises', exercises_path %>
 <!-- <a href="../exercises">Go to Exercises</a> -->

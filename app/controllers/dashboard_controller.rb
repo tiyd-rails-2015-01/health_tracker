@@ -5,6 +5,8 @@ class DashboardController < ApplicationController
     @steps = Step.calories_burned_with_steps
     @combined_burn = @exercise + @steps
     @net = @calories - @combined_burn
-    # @gain_or_loss = @net > 0 ? "gain" : "loss"
+
+    @todays_foods = Food.todays_foods
+    
   end
 end
