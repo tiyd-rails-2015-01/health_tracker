@@ -1,0 +1,21 @@
+
+
+
+
+<h1>Health Tracker Home Page</h1>
+<h2>Your health snap shot.</h2>
+<p>  </p>
+<p>  </p>
+<p>  </p>
+<p>steps walked to date:          <%= @steps_total %></p>
+<p>calories consumed to date:     <%=         %></p>
+<p>calories burned to date:       <%=         %></p>
+<p>calories consumed vs. Burned:  <%=         %></p>
+
+
+
+<p>Follow the links below to enter your data</p>
+<%= link_to 'Steps', steps_path %>
+<%= link_to 'Weights', weights_path %>
+<%= link_to 'Calories', calories_path %>
+<%= link_to 'Exercises', exercises_path %>

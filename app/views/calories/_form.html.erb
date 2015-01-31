@@ -1,29 +1,29 @@
 <%= form_for(@calorie) do |f| %>
-<% if @calorie.errors.any? %>
-<div id="error_explanation">
-  <h2><%= pluralize(@calorie.errors.count, "error") %> prohibited this step from being saved:</h2>
+  <% if @calorie.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@calorie.errors.count, "error") %> prohibited this step from being saved:</h2>
 
-  <ul>
-    <% @calorie.errors.full_messages.each do |message| %>
-    <li><%= message %></li>
-    <% end %>
-  </ul>
-</div>
-<% end %>
+    <ul>
+      <% @calorie.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+  <% end %>
 
-<div class="field">
-  <%= f.label :date %><br>
-  <%= f.date_select :date %>
-</div>
-<div class="field">
-  <%= f.label :meal %><br>
-  <%= select_tag "meal_selector", options_for_select(["Breakfast", "Lunch", "Dinner", "Snack"]), {include_blank: true} %>
-</div>
-<div class="field">
-  <%= f.label :calories_consumed %><br>
-  <%= f.number_field :calories_consumed %>
-</div>
-<div class="actions">
-  <%= f.submit %>
-</div>
+  <div class="field">
+    <%= f.label :date %><br>
+    <%= f.date_select :date %>
+  </div>
+  <div class="field">
+    <%= f.label :meal %><br>
+    <%= f.select :meal, options_for_select(["Breakfast", "Lunch", "Dinner", "Snack"]), {include_blank: true} %>
+  </div>
+  <div class="field">
+    <%= f.label :calories_consumed %><br>
+    <%= f.number_field :calories_consumed %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
 <% end %>
