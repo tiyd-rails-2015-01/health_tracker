@@ -7,6 +7,8 @@ class DashboardController < ApplicationController
     @net = @calories - @combined_burn
 
     @todays_foods = Food.todays_foods
-    
+    @todays_exercise = Exercise.todays_exercise
+    @todays_steps = Step.todays_steps
+    @todays_weight = Weight.todays_weight
   end
 end

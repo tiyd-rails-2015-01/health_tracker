@@ -23,4 +23,6 @@ class Food < ActiveRecord::Base
     return foods
   end
 
+  
+
 end

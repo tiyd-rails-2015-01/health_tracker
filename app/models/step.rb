@@ -9,6 +9,17 @@ class Step < ActiveRecord::Base
     end
 
     return running_total
+  end
 
+  def self.todays_steps
+    steps = []
+
+    self.all.each do |i|
+      if i.timePerformed == Date.today
+        steps << i
+      end
+    end
+
+    return steps
   end
 end
