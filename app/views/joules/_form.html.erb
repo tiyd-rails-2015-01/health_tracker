@@ -12,7 +12,7 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :consumed_joules %><br>
+    <%= f.label :consumed_calories %><br>
     <%= f.number_field :consumed_joules %>
   </div>
   <div class="field">
@@ -20,6 +20,6 @@
     <%= f.date_select :added_on %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit("Add New Calories") %>
   </div>
 <% end %>

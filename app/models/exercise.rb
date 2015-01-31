@@ -16,7 +16,6 @@ class Exercise < ActiveRecord::Base
       elsif Exercise.last.exercise_type == "Biking"
         calories_burned = 0.06 * Weight.where(:added_on== Date.today).last.user_weight * Exercise.last.duration
       end
-      @daily_calories_burned += calories_burned
       return calories_burned
     end
   end
