@@ -1,7 +1,7 @@
 class WeightsController < ApplicationController
 
   before_action :set_weight, only: [:show, :edit, :update, :destroy]
-  
+
   def index
     @weights = Weight.all
   end
@@ -56,12 +56,14 @@ class WeightsController < ApplicationController
 
 
 
-  private def set_weight
+  private
+
+  def set_weight
     @weight = Weight.find(params[:id])
   end
 
 
-  private def weight_params
+  def weight_params
     params.require(:weight).permit(:user_weight, :added_on)
   end
 end
