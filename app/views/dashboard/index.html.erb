@@ -65,14 +65,8 @@
 </table>
 <%= link_to 'New Steps', new_step_path %>
 
-<h3>Today, you weighed:</h3>
-<table>
-  <tbody>
-    <tr>
-      <td><%= @todays_weight %></td>
-    </tr>
-  </tbody>
-</table>
+<h3>Today, you weighed:</h3><%= @todays_weight %>
+
 <%= link_to 'New Weight', new_weight_path %>
 
 <p>Choose which activity you are tracking.</p>
