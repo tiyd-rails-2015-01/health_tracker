@@ -1,4 +1,5 @@
 class HomeController < ApplicationController
+
   def index
     total_steps
     calories_burned
