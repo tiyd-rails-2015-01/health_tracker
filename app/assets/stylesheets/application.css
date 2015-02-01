@@ -23,12 +23,13 @@
  }
 
  h1 {
-   color: #B34B46;
+   color: #268C5C;
    text-shadow: black 0 -1px;
  }
 
  h3 {
-   color: #D4817D;
+   color: #104887;
+   text-shadow: #6B1C41 0 -1px;
  }
 
  p {
@@ -41,7 +42,7 @@
  }
 
  button {
-   background-color: #D4817D;
+   background-color: #2FBA79;
    color: #050505;
    border-radius: 8px;
    font-weight: bold;
@@ -49,9 +50,14 @@
 
 table {
   display: table;
-  width: 85%;
+  width: 70%;
   border-collapse: separate;
   border-spacing: 0.5rem;
   text-align: center;
   border-color: #827C7C;
+}
+
+th {
+  color: #104887;
+  text-shadow: black 0 -1px;
 }
