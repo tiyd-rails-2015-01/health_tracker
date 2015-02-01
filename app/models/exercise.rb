@@ -1,5 +1,11 @@
 class Exercise < ActiveRecord::Base
 
+  validates :exercise_amount, presence: true
+  validates :exercise_amount, numericality: true
+  validates :calories_consumed, presence: true
+  validates :calories_consumed, numericality: true
+
+
   def self.exercise_count(exercise)
     total = 0.0
     Exercise.all.each do |e|

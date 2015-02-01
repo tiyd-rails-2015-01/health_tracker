@@ -1,6 +1,8 @@
 
 class Calory < ActiveRecord::Base
 
+  validates :calories_consumed, presence: true
+  validates :calories_consumed, numericality: true
 
   def self.total
     total = 0
