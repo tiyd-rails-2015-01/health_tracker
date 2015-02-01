@@ -6,7 +6,6 @@ class DashboardController < ApplicationController
     @num_weights =Weight.count
     @total_weight_lost= 0
     @net_calories_today= Exercise.net_calories_today
-    @calories_burned=Exercise.calories_burned_all_time
     @calories_burned_today= Exercise.calories_burned_today
 
     if @num_weights == 0
@@ -23,10 +22,6 @@ class DashboardController < ApplicationController
     @exercises_percent=(@total_exercises/@total) * 100
     @weight_lost_percent=(@total_weight_lost/@total) * 100
     @steps_percent=(@total_steps/@total) * 100
-
-
-
-
 
   end
 
