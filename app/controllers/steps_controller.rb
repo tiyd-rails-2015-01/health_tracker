@@ -4,12 +4,7 @@ class StepsController < ApplicationController
   # GET /steps
   # GET /steps.json
   def index
-    @steps = Step.all
-    total = 0
-    @steps.each do |step|
-      total += step.steps_taken unless step.steps_taken.nil?
-    end
-    @steps_total = total
+    total_steps
   end
 
   # GET /steps/1

@@ -4,12 +4,7 @@ class ExercisesController < ApplicationController
   # GET /weights
   # GET /weights.json
   def index
-    @exercises = Exercise.all
-    total = 0
-    @exercises.each do |exercise|
-      total += exercise.calories_burned unless exercise.calories_burned.nil?
-    end
-    @calories_burned_total = total
+    calories_burned
   end
 
   # GET /exercises/1
