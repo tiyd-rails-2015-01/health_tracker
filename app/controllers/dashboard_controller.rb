@@ -5,6 +5,7 @@ class DashboardController < ApplicationController
     @total_steps= Step.sum(:steps_taken)
     @total_calories_consumed= Joule.sum(:consumed_joules)
     @num_weights =Weight.count
+    @total_weight_lost= 0
 
 
 
