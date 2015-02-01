@@ -1,7 +1,6 @@
 class DashboardController < ApplicationController
   def status
     @total_exercises= Exercise.sum(:duration)
-    @entered_weight= Weight.sum(:user_weight)
     @total_steps= Step.sum(:steps_taken)
     @total_calories_consumed= Joule.sum(:consumed_joules)
     @num_weights =Weight.count
@@ -9,7 +8,7 @@ class DashboardController < ApplicationController
 
 
 
-    if @entered_weight > 0
+    if @num_weights > 0
       @latest_weight= Weight.last.user_weight
       @total_weight_lost= Weight.first.user_weight - Weight.last.user_weight
       graph=[@total_exercises, @total_weight_lost, @total_steps, @total_calories_consumed]

@@ -1,6 +1,8 @@
 class Exercise < ActiveRecord::Base
   attr_reader :daily_calories_burned
   validates :exercise_type, presence: true
+  validates :duration, numericality: true
+  validates :duration, presence: true
   default_scope { order('added_on') }
   @daily_calories_burned= 0
 

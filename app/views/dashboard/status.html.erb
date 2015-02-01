@@ -4,13 +4,12 @@
 <h2>Dashboard</h2>
 </header>
 
-<%= render 'layouts/navigation' %>
 
 
 
 <h3>Progress</h3>
 
-<%if @entered_weight >0 %>
+<%if @num_weights >0 %>
   <p>Your most recent weight: <%= @latest_weight %> lbs </p>
 <%end%>
 
