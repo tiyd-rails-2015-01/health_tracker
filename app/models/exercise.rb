@@ -17,6 +17,11 @@ class Exercise < ActiveRecord::Base
     end
   end
 
+  def self.daily_calories_burned
+     burned = Exercise.where(:logged_on == Date.today)
+     return burned.sum(calculate_calories)
+  end
+
   # def self.burned_calories
   #   burn = Exercise.where(:logged_on == Date.today)
   #   return burn.sum(calculate_calories)

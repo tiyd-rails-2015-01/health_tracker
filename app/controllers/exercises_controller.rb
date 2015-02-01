@@ -5,6 +5,8 @@ class ExercisesController < ApplicationController
   # GET /exercises.json
   def index
     @exercises = Exercise.all
+    # @calories_burned = Exercise.calculate_calories
+    @daily_calories_burned = Exercise.daily_calories_burned
   end
 
   # GET /exercises/1
