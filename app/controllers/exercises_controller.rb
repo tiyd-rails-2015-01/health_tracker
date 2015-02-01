@@ -8,18 +8,9 @@ class ExercisesController < ApplicationController
     @total_amount = @exercises.reduce(0) {|sum, i| sum + i.calories}
   end
 
-  # GET /exercises/1
-  # GET /exercises/1.json
-  def show
-  end
-
   # GET /exercises/new
   def new
     @exercise = Exercise.new
-  end
-
-  # GET /exercises/1/edit
-  def edit
   end
 
   # POST /exercises

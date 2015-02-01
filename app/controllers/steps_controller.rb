@@ -7,18 +7,9 @@ class StepsController < ApplicationController
     @steps = Step.all
   end
 
-  # GET /steps/1
-  # GET /steps/1.json
-  def show
-  end
-
   # GET /steps/new
   def new
     @step = Step.new
-  end
-
-  # GET /steps/1/edit
-  def edit
   end
 
   # POST /steps

@@ -1,13 +1,13 @@
 <h1>Dashboard</h1>
 <p>So far today, you have consumed <%= @calories %> calories.</p>
 <p>Your steps and exercise together have burned <%= @combined_burn %> calories.</p>
-
 <p>Therefore, your net calorie consumption is <%=@net %>.</p>
-<p>Choose which activity you are tracking.</p>
-<%= link_to 'New Exercises', exercises_path %>
-<!-- <a href="../exercises">Go to Exercises</a> -->
-<%= link_to 'New Foods', foods_path %>
-<!-- <a href="../steps">Go to Steps</a> -->
-<%= link_to 'New Steps', steps_path %>
+<h3>Choose which activity you are tracking.</h3>
 
 <%= link_to 'New Weight', weights_path %>
+
+<%= link_to 'New Food', foods_path %>
+
+<%= link_to 'New Steps', steps_path %>
+
+<%= link_to 'New Exercise', exercises_path %>

@@ -8,18 +8,9 @@ class WeightsController < ApplicationController
   #   @total_amount = @weights.reduce(0) {|sum, i| sum + i.weight}
   end
 
-  # GET /weights/1
-  # GET /weights/1.json
-  def show
-  end
-
   # GET /steps/new
   def new
     @weight = Weight.new
-  end
-
-  # GET /weights/1/edit
-  def edit
   end
 
   # POST /weights

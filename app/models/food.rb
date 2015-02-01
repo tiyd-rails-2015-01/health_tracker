@@ -1,4 +1,5 @@
 class Food < ActiveRecord::Base
+
   def self.calculate_calories
     running_total = 0
 
@@ -11,4 +12,5 @@ class Food < ActiveRecord::Base
     return running_total
 
   end
+  
 end

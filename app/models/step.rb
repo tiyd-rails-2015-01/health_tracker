@@ -1,5 +1,7 @@
 class Step < ActiveRecord::Base
+  
   def self.calories_burned_with_steps
+
     running_total = 0
 
     self.all.each do |i|
@@ -11,4 +13,5 @@ class Step < ActiveRecord::Base
     return running_total
 
   end
+
 end
