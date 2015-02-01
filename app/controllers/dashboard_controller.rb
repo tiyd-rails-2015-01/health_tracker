@@ -20,9 +20,7 @@ class DashboardController < ApplicationController
     end
 
 
-    if @num_weights> 0 && @total_exercises > 0
-      @net_calories = Joule.calories_entered_today - Exercise.calories_burned.to_f
-    end
+@net_calories= Exercise.net_calories
 
 
   end

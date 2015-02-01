@@ -13,9 +13,10 @@
   <p>Your most recent weight: <%= @latest_weight %> lbs </p>
 <%end%>
 
+<%= Exercise.calories_burned %>
 
 <%if @total_exercises >0 && @total_calories_consumed>0 %>
-  <p>Your net calories are: <%= @net_calories %> </p>
+
 <%else%>
   <p>Please enter weight, exercises performed and calories consumed to see your net calories </p>
 <%end%>
