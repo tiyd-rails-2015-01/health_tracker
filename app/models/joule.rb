@@ -4,4 +4,5 @@ class Joule < ActiveRecord::Base
     js= Joule.where(added_on: Date.today)
     return js.sum(:consumed_joules)
   end
+
 end
