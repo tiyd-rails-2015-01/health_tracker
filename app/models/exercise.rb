@@ -11,7 +11,18 @@ class Exercise < ActiveRecord::Base
     end
 
     return running_total
-    
+  end
+
+  def self.todays_exercise
+    exercise = []
+
+    self.all.each do |i|
+      if i.timePerformed == Date.today
+        exercise << i
+      end
+    end
+
+    return exercise
   end
 
 end

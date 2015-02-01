@@ -2,12 +2,84 @@
 <p>So far today, you have consumed <%= @calories %> calories.</p>
 <p>Your steps and exercise together have burned <%= @combined_burn %> calories.</p>
 <p>Therefore, your net calorie consumption is <%=@net %>.</p>
-<h3>Choose which activity you are tracking.</h3>
+<h3>Today, you ate:</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Description</th>
+      <th>Calories</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
 
-<%= link_to 'New Weight', weights_path %>
+  <tbody>
+    <% @todays_foods.each do |food| %>
+      <tr>
+        <td><%= food.description %></td>
+        <td><%= food.calories %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= link_to 'New Food', new_food_path %>
 
-<%= link_to 'New Food', foods_path %>
+
+<h3>Today, you performed the following exercises:</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Description</th>
+      <th>Calories Burned</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @todays_exercise.each do |exercise| %>
+      <tr>
+        <td><%= exercise.description %></td>
+        <td><%= exercise.calories %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= link_to 'New Exercise', new_exercise_path %>
+
+
+<h3>Today, you walked this many steps:</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Steps</th>
+      <th colspan="1"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @todays_steps.each do |step| %>
+      <tr>
+        <td><%= step.steps %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= link_to 'New Steps', new_step_path %>
+
+<h3>Today, you weighed:</h3>
+<table>
+  <tbody>
+    <tr>
+      <td><%= @todays_weight %></td>
+    </tr>
+  </tbody>
+</table>
+<%= link_to 'New Weight', new_weight_path %>
+
+<p>Choose which activity you are tracking.</p>
+<%= link_to 'New Exercises', exercises_path %>
+
+<%= link_to 'New Foods', foods_path %>
 
 <%= link_to 'New Steps', steps_path %>
 
-<%= link_to 'New Exercise', exercises_path %>
+<%= link_to 'New Weight', weights_path %>
