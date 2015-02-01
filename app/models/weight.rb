@@ -7,5 +7,7 @@ class Weight < ActiveRecord::Base
         return i.weight
       end
     end
+
+    return "an unknown quantity of"
   end
 end
