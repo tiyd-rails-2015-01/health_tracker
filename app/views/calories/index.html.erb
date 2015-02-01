@@ -16,9 +16,9 @@
   <tbody>
     <% @calories.each do |calorie| %>
     <tr>
-      <td><%= calorie.created_at %> |</td>
-      <td><%= calorie.date %> |</td>
-      <td><%= calorie.meal %> |</td>
+      <td><%= calorie.created_at %> </td>
+      <td><%= calorie.date %> </td>
+      <td><%= calorie.meal %> </td>
       <td><%= calorie.calories_consumed %></td>
       <td><%= link_to '<button type="button">Show</button>' .html_safe, calorie %></td>
       <td><%= link_to '<button type="button">Edit</button>' .html_safe, edit_calory_path(calorie) %></td>

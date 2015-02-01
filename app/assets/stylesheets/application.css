@@ -49,9 +49,9 @@
 
 table {
   display: table;
-  width: 70%;
+  width: 85%;
   border-collapse: separate;
   border-spacing: 0.5rem;
   text-align: center;
-  border-color: gray;
+  border-color: #827C7C;
 }
