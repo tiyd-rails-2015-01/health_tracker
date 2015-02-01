@@ -25,6 +25,8 @@
     <% end %>
   </tbody>
 </table>
+<%= link_to 'New Food', new_food_path %>
+
 
 <h3>Today, you performed the following exercises:</h3>
 <table>
@@ -45,6 +47,8 @@
     <% end %>
   </tbody>
 </table>
+<%= link_to 'New Exercise', new_exercise_path %>
+
 
 <h3>Today, you walked this many steps:</h3>
 <table>
@@ -63,6 +67,7 @@
     <% end %>
   </tbody>
 </table>
+<%= link_to 'New Steps', new_step_path %>
 
 <h3>Today, you weighed:</h3>
 <table>
@@ -72,6 +77,7 @@
     </tr>
   </tbody>
 </table>
+<%= link_to 'New Weight', new_weight_path %>
 
 <p>Choose which activity you are tracking.</p>
 <%= link_to 'New Exercises', exercises_path %>
