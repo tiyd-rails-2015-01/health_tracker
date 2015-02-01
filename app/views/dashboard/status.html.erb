@@ -13,10 +13,11 @@
   <p>Your most recent weight: <%= @latest_weight %> lbs </p>
 <%end%>
 
-<%= Exercise.calories_burned %>
-
+<%if @total_exercises >0 %>
+  <p>You've burned <%= @calories_burned %> calories </p>
+<%end%>
 <%if @total_exercises >0 && @total_calories_consumed>0 %>
-
+  <p>Your net calories for today are: <%= @net_calories.round(2) %> </p>
 <%else%>
   <p>Please enter weight, exercises performed and calories consumed to see your net calories </p>
 <%end%>
@@ -24,8 +25,8 @@
 
 
 
-<%if @total== 0 || @num_weights == 0%>
-  <h4>Please enter your stats to see your progress! Enter your weight first to get started.</h4>
+<%if @total== 0%>
+  <h4>Please enter your exercises or steps to see your progress.</h4>
 <%else%>
   <ul class="chart">
     <li class="bar teal" style="height: <%=@weight_lost_percent %>%;">
@@ -38,8 +39,8 @@
       <div class="percent"><%=@total_steps %></div>
       <div class="activity">Steps</div></li>
     <li class="bar green" style="height: <%=@calories_percent %>%;">
-      <div class="percent"><%=@total_calories_consumed %></div>
-      <div class="activity">Calories Consumed</div></li>
+      <div class="percent"><%=@calories_burned%></div>
+      <div class="activity">Calories Burned</div></li>
   </ul>
 <%end%>
 </body>
