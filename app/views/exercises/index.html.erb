@@ -1,6 +1,18 @@
-<p id="notice"><%= notice %></p>
+<nav class="fixed-nav-bar">
+  <div class="nav">
+    <span id="home">HealthTracker</span>
+    <%= link_to '<button type="button">Steps</button>' .html_safe, steps_path %>
+    <%= link_to '<button type="button">Weight</button>' .html_safe, weights_path %>
+    <%= link_to '<button type="button">Calories</button>' .html_safe, calories_path %>
+    <%= link_to '<button type="button">Exercise</button>' .html_safe, exercises_path %>
+  </div>
+</nav>
 
-<h1>Exercise</h1>
+<div class="inner-div">
+<p id="notice"><%= notice %></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h2>Exercise</h2>
 
 <table>
   <thead>
@@ -35,3 +47,4 @@
 <%= link_to '<button type="button">New Exercise</button>' .html_safe, new_exercise_path %>
 <%= link_to '<button type="button">New Calories</button>' .html_safe, new_calory_path %>
 <%= link_to '<button type="button">Home</button>' .html_safe, root_path %>
+</div>
