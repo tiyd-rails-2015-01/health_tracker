@@ -4,7 +4,7 @@
 
 
 <h2> Take a look at your latest data entries. </h2>
-<span> Your most recent Weight: </span><span><%= @weight %></span>
+<span> Your most recent Weight in lb: </span><span><%= @weight %></span>
 <br>
 <%= link_to 'Add New Weight', new_weight_path %></span>
 <br>
@@ -23,4 +23,7 @@
 <%= "Your total daily calorie intake is: #{@daily_calories}" %>
 <br>
 <%= "Your total daily calories burned is: #{@daily_calories_burned}" %>
+<br>
+<%= "Total calorie net loss: #{@total_calories}" %>
 </body>
+<%=  %>

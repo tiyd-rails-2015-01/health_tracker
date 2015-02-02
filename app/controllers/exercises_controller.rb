@@ -7,6 +7,7 @@ class ExercisesController < ApplicationController
     @exercises = Exercise.all
     # @calories_burned = Exercise.calculate_calories
     @daily_calories_burned = Exercise.daily_calories_burned
+    @total_burned_calories = Exercise.total_burned_calories
   end
 
   # GET /exercises/1

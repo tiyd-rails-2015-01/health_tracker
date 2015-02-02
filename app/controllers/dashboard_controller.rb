@@ -33,7 +33,9 @@ class DashboardController < ApplicationController
 
     @daily_calories = Calorie.daily_calories
     @daily_calories_burned = Exercise.daily_calories_burned
-
+    @total_burned_calories = Exercise.total_burned_calories
+    @total_consumed_calories = Calorie.total_consumed_calories
+    @total_calories = @total_burned_calories - @total_consumed_calories
     # @daily_calories_burned = Exercise.last.calculate_calories
 
   end

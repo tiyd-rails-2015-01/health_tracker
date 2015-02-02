@@ -25,4 +25,12 @@ class Exercise < ActiveRecord::Base
     end
     return total
   end
+
+  def self.total_burned_calories
+    total = 0
+    Exercise.all.each do |exercise|
+      total += exercise.calculate_calories.to_f
+    end
+    return total
+  end
 end
