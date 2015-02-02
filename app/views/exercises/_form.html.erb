@@ -1,0 +1,14 @@
+<%= form_for(@exercise) do |f|%>
+  <div class="field">
+    <%= f.label :entered_on %><br>
+    <%= f.date_select :entered_on %>
+  </div>
+  <div class="field">
+    <%= f.label :exercise %><br>
+    <%= f.select "exercise", options_for_select(["Cardio","Strength Training","Spin Class","Jazzercise","Kick-boxing"]) %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+  <p></p>
+<% end %>

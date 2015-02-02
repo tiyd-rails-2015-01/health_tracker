@@ -1,0 +1,14 @@
+<%= form_for(@calorie) do |f|%>
+  <div class="field">
+    <%= f.label :entered_on %><br>
+    <%= f.date_select :entered_on %>
+  </div>
+  <div class="field">
+    <%= f.label :calorie %><br>
+    <%= f.text_field :calorie %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+  <p></p>
+<% end %>

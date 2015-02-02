@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Entered on:</strong>
+  <%= @exercise.entered_on %>
+</p>
+
+<p>
+  <strong>exercises:</strong>
+  <%= @exercise.exercise %>
+</p>
+
+<%= link_to 'Edit', edit_exercise_path(@exercise) %> |
+<%= link_to 'Home', root_path %>

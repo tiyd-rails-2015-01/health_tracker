@@ -1,0 +1,13 @@
+<%= form_for(@step) do |f|%>
+  <div class="field">
+    <%= f.label :entered_on %><br>
+    <%= f.date_select :entered_on %>
+  </div>
+  <div class="field">
+    <%= f.label :step %><br>
+    <%= f.text_field :step %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

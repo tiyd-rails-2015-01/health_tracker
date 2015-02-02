@@ -1,0 +1,15 @@
+<h1>Home#home</h1>
+<p>Find me in app/views/home/home.html.erb</p>
+
+<%= link_to 'Weight', weights_path %>
+<%= link_to 'Steps', steps_path %>
+<%= link_to 'Calories', calories_path %>
+<%= link_to 'Exercises', exercises_path %>
+
+<p>
+  <% if @total.blank? %>
+    EAT SOMETHING
+  <% else %>
+    Total Calories <%= @total %>
+  <% end %>
+</p>
