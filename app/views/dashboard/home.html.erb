@@ -2,8 +2,8 @@
   <h1>Welcome to your Fitness Tracker</h1>
   <br>
 
-
-<h2> Take a look at your latest data entries. </h2>
+<div><center>
+<h2><center> Take a look at your latest data entries. </center></h2>
 <span> Your most recent Weight in lb: </span><span><%= @weight %></span>
 <br>
 <%= link_to 'Add New Weight', new_weight_path %></span>
@@ -26,4 +26,5 @@
 <br>
 <%= "Total daily net calories: #{@total_calories}" %>
 </body>
-<%=  %>
+</center>
+</div>
