@@ -1,0 +1,54 @@
+<style>
+body {background-color: #EEFFFF}
+body {text-align: center}
+</style>
+
+<style>
+h1 {color: red}
+</style>
+<p id="notice"><%= notice %></p>
+<body style="background: #EEFFFF;">
+<h1><font color="red">Daily Exercise Tracker</font></h1>
+<h2>Please fill in the information below:</h2>
+<h3>Use the following to calculate calories burned.</h3>
+<div><h4>10 situps = 50 cal. 10 pushups = 100 cal. 10 squat thrust = 200 cal.</h4></div>
+
+<center><table>
+  <thead>
+    <tr>
+      <th>Exercise amount</th>
+      <th>Exercise type</th>
+      <th>Date of exercise</th>
+      <th>Calories Burned</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @exercises.each do |exercise| %>
+      <tr>
+        <td><%= exercise.exercise_amount %></td>
+        <td><%= exercise.exercise_type %></td>
+        <td><%= exercise.exercise_on %></td>
+        <td><%= exercise.calories_consumed %></td>
+        <td><%= link_to 'Show', exercise %></td>
+        <td><%= link_to 'Edit', edit_exercise_path(exercise) %></td>
+        <td><%= link_to 'Destroy', exercise, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table></center>
+
+<br>
+
+<%= link_to 'New Exercise', new_exercise_path %>
+<div>
+<p><%= link_to 'Home', :root %></p>
+</div>
+
+<div>
+  <p><h4>Your total pushups:<%= @pushups_total %></h4><p>
+  <p><h4>Your total situps:<%= @situps_total %></h4><p>
+  <p><h4>Your total squat thrusts:<%= @squat_thrusts_total %></h4><p>
+    <p><h4>Your total calories burned:<%= @calories_total %></h4><p>
+<div>

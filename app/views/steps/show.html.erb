@@ -1,0 +1,23 @@
+<style>
+body {background-color: #EEFFFF}
+body {text-align: center}
+h1 {color: red}
+</style>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Step amount:</strong>
+  <%= @step.step_amount %>
+</p>
+
+<p>
+  <strong>Step on:</strong>
+  <%= @step.step_on %>
+</p>
+
+<%= link_to 'Edit', edit_step_path(@step) %> |
+<%= link_to 'Back', steps_path %>
+<div>
+<p><%= link_to 'Home', :root %></p>
+</div>

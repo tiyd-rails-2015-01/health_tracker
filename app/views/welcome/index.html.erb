@@ -1,0 +1,36 @@
+<style>
+h1 {color: red}
+body {background-color: #EEFFFF}
+body {text-align: center}
+body {border-style: groove}
+body {border-color: #FF00B6}
+body {border-width: 60px}
+p {font-size: large}
+p {color: black}
+h2 {text-align: center}
+h2 {color: red }
+h3 {color: black}
+h3 {text-align: center}
+</style>
+
+<body>
+
+<h1>Welcome! Make my day.</h1>
+
+
+<div>
+  <p><%= link_to 'Calories', calories_path %></p>
+  <p><%= link_to 'Exercises', exercises_path %></p>
+  <p><%= link_to 'Weight', weights_path %></p>
+  <p><%= link_to 'Steps', steps_path %></p>
+
+<br>
+  <div>
+    <h2> Calorie Count:</h2> <h3><%= @daily_cals %> </h3>
+  </div>
+</br>
+
+
+</body>
+
+<%= image_tag("https://static.fjcdn.com/pictures/Badass+kitten+sometimes+you+truly+do_fb3510_5424091.jpg") %>

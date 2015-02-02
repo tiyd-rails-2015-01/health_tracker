@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  weight_amount: 1.5
+  weight_on: 2015-01-29
+
+two:
+  weight_amount: 1.5
+  weight_on: 2015-01-29

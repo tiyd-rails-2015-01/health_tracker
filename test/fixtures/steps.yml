@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  step_amount: 1
+  step_on: 2015-01-30
+
+two:
+  step_amount: 1
+  step_on: 2015-01-30

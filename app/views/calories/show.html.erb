@@ -1,0 +1,23 @@
+<style>
+body {background-color: #EEFFFF}
+body {text-align: center}
+h1 {color: red}
+</style>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Calories consumed:</strong>
+  <%= @calory.calories_consumed %>
+</p>
+
+<p>
+  <strong>Calories on:</strong>
+  <%= @calory.calories_on %>
+</p>
+
+<%= link_to 'Edit', edit_calory_path(@calory) %> |
+<%= link_to 'Back', calories_path %>
+<div>
+<p><%= link_to 'Home', :root %></p>
+</div>
