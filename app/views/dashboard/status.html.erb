@@ -1,0 +1,45 @@
+<body>
+<header>
+<h1>Your Personal Health Tracker</h1>
+<h2>Dashboard</h2>
+</header>
+
+
+
+
+<h3>Today's Progress</h3>
+
+<%if @num_weights >0 %>
+  <p>Your most recent weight: <%= @latest_weight %> lbs </p>
+<%end%>
+
+<%if @total_exercises >0 %>
+  <p>You've burned <%= @calories_burned_today %> calories today </p>
+<%end%>
+<%if @total_exercises >0 && @todays_calories>0 %>
+  <p>You've consumed <%= @todays_calories %> calories today </p>
+  <p>Your net calories for today are: <%= @net_calories_today.round(2) %> </p>
+<%else%>
+  <p>Please enter weight, exercises performed and calories consumed to see your net calories for today </p>
+<%end%>
+
+
+
+
+<%if @total== 0%>
+  <h4>Please enter your exercises or steps to see your progress.</h4>
+<%else%>
+  <h4>All Time Activities:</h4>
+  <ul class="chart">
+    <li class="bar teal" style="height: <%=@weight_lost_percent %>%;">
+      <div class="percent"><%=@total_weight_lost %>lbs</div>
+      <div class="activity">Weight Lost</div></li>
+    <li class="bar blue" style="height: <%=@exercises_percent %>%;">
+      <div class="percent"><%= @total_exercises %></div>
+      <div class="activity">Minutes Exercised</div></li>
+    <li class="bar purple" style="height: <%=@steps_percent %>%;">
+      <div class="percent"><%=@total_steps %></div>
+      <div class="activity">Steps</div></li>
+  </ul>
+<%end%>
+</body>
