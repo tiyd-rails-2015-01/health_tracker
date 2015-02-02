@@ -1,0 +1,35 @@
+<nav class="fixed-nav-bar">
+  <div class="nav">
+    <span id="home">HealthTracker</span>
+    <%= link_to '<button type="button">Steps</button>' .html_safe, steps_path %>
+    <%= link_to '<button type="button">Weight</button>' .html_safe, weights_path %>
+    <%= link_to '<button type="button">Calories</button>' .html_safe, calories_path %>
+    <%= link_to '<button type="button">Exercise</button>' .html_safe, exercises_path %>
+  </div>
+</nav>
+
+<div class="inner-div">
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+<p id="notice"><%= notice %></p>
+
+<h1>Show Calories</h1>
+
+<p>
+  <strong>Date:</strong>
+  <%= @calorie.date %>
+</p>
+
+<p>
+  <strong>Meal:</strong>
+  <%= @calorie.meal %>
+</p>
+
+<p>
+  <strong>Calories:</strong>
+  <%= @calorie.calories_consumed %>
+</p>
+
+<%= link_to '<button type="button">Edit</button>' .html_safe, edit_calory_path(@calorie) %> 
+<%= link_to '<button type="button">Calories Home</button>' .html_safe, calories_path %>
+</div>

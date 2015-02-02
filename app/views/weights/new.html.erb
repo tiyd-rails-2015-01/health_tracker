@@ -1,0 +1,19 @@
+<nav class="fixed-nav-bar">
+  <div class="nav">
+    <span id="home">HealthTracker</span>
+    <%= link_to '<button type="button">Steps</button>' .html_safe, steps_path %>
+    <%= link_to '<button type="button">Weight</button>' .html_safe, weights_path %>
+    <%= link_to '<button type="button">Calories</button>' .html_safe, calories_path %>
+    <%= link_to '<button type="button">Exercise</button>' .html_safe, exercises_path %>
+  </div>
+</nav>
+
+<div class="inner-div">
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+<h1>New Weight</h1>
+
+<%= render 'form' %>
+
+<%= link_to '<button type="button">Back</button>' .html_safe, weights_path %>
+</div>

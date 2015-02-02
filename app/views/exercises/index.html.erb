@@ -1,0 +1,50 @@
+<nav class="fixed-nav-bar">
+  <div class="nav">
+    <span id="home">HealthTracker</span>
+    <%= link_to '<button type="button">Steps</button>' .html_safe, steps_path %>
+    <%= link_to '<button type="button">Weight</button>' .html_safe, weights_path %>
+    <%= link_to '<button type="button">Calories</button>' .html_safe, calories_path %>
+    <%= link_to '<button type="button">Exercise</button>' .html_safe, exercises_path %>
+  </div>
+</nav>
+
+<div class="inner-div">
+<p id="notice"><%= notice %></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h2>Exercise</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Created at</th>
+      <th>Date</th>
+      <th>Exercise</th>
+      <th>Calories Burned</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @exercises.each do |exercise| %>
+      <tr>
+        <td><%= exercise.created_at %> </td>
+        <td><%= exercise.date %>  </td>
+        <td><%= exercise.type_of_exercise %> </td>
+        <td><%= exercise.calories_burned%> </td>
+        <td><%= link_to '<button type="button">Show</button>' .html_safe, exercise %></td>
+        <td><%= link_to '<button type="button">Edit</button>' .html_safe, edit_exercise_path(exercise) %></td>
+        <td><%= link_to '<button type="button">Destroy</button>' .html_safe, exercise, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<p><strong>Your total calories burned to date: </strong><%= @calories_burned_total %></p>
+<br>
+
+<%= link_to '<button type="button">New Steps</button>' .html_safe, new_step_path %>
+<%= link_to '<button type="button">New Weight</button>' .html_safe, new_weight_path %>
+<%= link_to '<button type="button">New Exercise</button>' .html_safe, new_exercise_path %>
+<%= link_to '<button type="button">New Calories</button>' .html_safe, new_calory_path %>
+<%= link_to '<button type="button">Home</button>' .html_safe, root_path %>
+</div>

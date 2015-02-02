@@ -1,0 +1,129 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+
+
+
+ .fixed-nav-bar {
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   z-index: 9999;
+   width: 100%;
+   height: 65px;
+   background-color: #1D356C;
+ }
+
+ body {
+   background-color: #324A83;
+   color: #000000;
+   font-family: verdana, arial, helvetica, sans-serif;
+   font-size: 16px;
+   line-height: 18px;
+   border-radius: 10px 10px 10px 10px;
+   border: 2px solid black;
+ }
+
+ .inner-div {
+   background-color: #A6B4D6;
+   width: 100%;
+   border-radius: 10px 10px 10px 10px;
+}
+
+ .nav {
+  color:#298077;
+  text-shadow: 19544E 0 -2px;
+  text-indent: 0.5em;
+  font-size: 15px;
+  border-radius: 2px;
+}
+
+ .field {
+   position: relative;
+   left: 20px;
+ }
+
+ .actions {
+   position: relative;
+   left: 20px;
+ }
+
+ #home {
+  position: relative;
+  top: 15px;
+  color: #7286B5;
+  text-shadow: black 0 -1px;
+  text-indent: 0.5em;
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 2em;
+}
+
+ h1 {
+   color: #1D1C3E;
+   text-shadow: black 0 -1px;
+   text-indent: 0.5em;
+   font-size: 30px;
+   font-weight: bold;
+ }
+
+ h2 {
+   color: #1D356C;
+   text-shadow: black 0 -1px;
+   text-indent: 0.5em;
+ }
+
+ p {
+   text-indent: 2em;
+ }
+
+ #intro {
+   text-indent: 1em;
+   font-style: italic;
+ }
+
+ button {
+   background-color: #7286B5;
+   color: #050505;
+   border-radius: 8px;
+   font-weight: bold;
+   margin-left: 10px;
+   margin-bottom: 10px;
+   box-shadow: #68706F 0 -1px;
+   border:none;
+   /*border: 2px solid black;*/
+ }
+
+ nav button {
+   position: relative;
+   top: 10px;
+ }
+
+ table {
+  display: table;
+  width: 85%;
+  border-collapse: separate;
+  border-spacing: 0.5rem;
+  text-align: center;
+  border-color: #827C7C;
+}
+
+  th {
+  color: #1D356C;
+  text-shadow: black 0 -1px;
+}

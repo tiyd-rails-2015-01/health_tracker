@@ -1,0 +1,29 @@
+<nav class="fixed-nav-bar">
+  <div class="nav">
+    <span id="home">HealthTracker</span>
+    <%= link_to '<button type="button">Steps</button>' .html_safe, steps_path %>
+    <%= link_to '<button type="button">Weight</button>' .html_safe, weights_path %>
+    <%= link_to '<button type="button">Calories</button>' .html_safe, calories_path %>
+    <%= link_to '<button type="button">Exercise</button>' .html_safe, exercises_path %>
+  </div>
+</nav>
+
+<div class="inner-div">
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+<h2>Your Health Snapshot</h2>
+  <p><strong>Calories Consumed vs. Burned:    </strong><%= @net_calories  %></p>
+
+  <p><strong>Calories Consumed To Date:    </strong><%= @calories_consumed_total %></p>
+  <p><strong>Calories Burned To Date:    </strong><%= @calories_burned_total %></p>
+  <p><strong>Steps Walked To Date:    </strong><%= @steps_total %></p>
+  <p><strong>Your Caloric Status Suggests.....   </strong><%= @quote  %></p>
+  <p>&nbsp;</p>
+
+  <p id="intro">Follow the links below to enter your data</p>
+
+  <%= link_to '<button type="button">Steps</button>' .html_safe, steps_path %>
+  <%= link_to '<button type="button">Weight</button>' .html_safe, weights_path %>
+  <%= link_to '<button type="button">Calories</button>' .html_safe, calories_path %>
+  <%= link_to '<button type="button">Exercise</button>' .html_safe, exercises_path %>
+</div>
