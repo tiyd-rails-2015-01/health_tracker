@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Calories Consumeds</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Food</th>
+      <th>Calories</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @calories_consumeds.each do |calories_consumed| %>
+      <tr>
+        <td><%= calories_consumed.date %></td>
+        <td><%= calories_consumed.food %></td>
+        <td><%= calories_consumed.calories %></td>
+        <td><%= link_to 'Show', calories_consumed %></td>
+        <td><%= link_to 'Edit', edit_calories_consumed_path(calories_consumed) %></td>
+        <td><%= link_to 'Destroy', calories_consumed, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<h2> You have consumed <%= @daily_calories_consumed %> today.</h2>
+
+<%= link_to 'New Calories consumed', new_calories_consumed_path %>
+
+<%= link_to 'Return Home', home_dashboard_path %>
