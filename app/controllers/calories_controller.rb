@@ -19,7 +19,6 @@ class CaloriesController < ApplicationController
 
   # GET /calories/1/edit
   def edit
-    @calorie = Calorie.new(params[:meal_selector])
   end
 
   # POST /calories
